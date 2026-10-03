@@ -399,6 +399,10 @@
 				<source>No reminder is overdue.</source>
 				<target>Keine Erinnerung ist überfällig.</target>
 			</trans-unit>
+			<trans-unit id="userSettings.mailOptOut" approved="yes">
+				<source>Do not send me the weekly email with due reminders</source>
+				<target>Keine wöchentliche E-Mail mit fälligen Erinnerungen senden</target>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

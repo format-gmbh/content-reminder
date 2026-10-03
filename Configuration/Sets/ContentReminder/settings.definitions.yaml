@@ -1,8 +1,47 @@
 categories:
   contentReminder: ~
+  contentReminder.mail:
+    parent: contentReminder
 
 settings:
   contentReminder.assignableGroups:
     default: ''
     type: string
     category: contentReminder
+  contentReminder.backendUrl:
+    default: ''
+    type: string
+    category: contentReminder
+
+  contentReminder.mail.enabled:
+    default: true
+    type: bool
+    category: contentReminder.mail
+  contentReminder.mail.weekday:
+    default: 'monday'
+    type: string
+    category: contentReminder.mail
+    enum:
+      - 'monday'
+      - 'tuesday'
+      - 'wednesday'
+      - 'thursday'
+      - 'friday'
+      - 'saturday'
+      - 'sunday'
+  contentReminder.mail.lookaheadDays:
+    default: 7
+    type: int
+    category: contentReminder.mail
+  contentReminder.mail.fromAddress:
+    default: ''
+    type: string
+    category: contentReminder.mail
+  contentReminder.mail.fromName:
+    default: ''
+    type: string
+    category: contentReminder.mail
+  contentReminder.mail.unassignedRecipient:
+    default: ''
+    type: string
+    category: contentReminder.mail

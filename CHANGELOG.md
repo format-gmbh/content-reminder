@@ -4,6 +4,17 @@ All notable changes to this extension are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/),
 versions follow [Semantic Versioning](https://semver.org/).
 
+## [Unreleased]
+
+### Added
+
+- Weekly email with overdue and upcoming reminders per responsible person and
+  site, sent by the command `content-reminder:send-weekly-mail` (to be run daily
+  via the scheduler); German and English
+- Site settings for the weekly email (weekday, lookahead, sender, recipient for
+  unassigned reminders) and `contentReminder.backendUrl`
+- User setting to opt out of the weekly email
+
 ## [0.1.0] - 2026-10-03
 
 First public release for TYPO3 13.4 LTS and 14.x.
@@ -22,4 +33,5 @@ First public release for TYPO3 13.4 LTS and 14.x.
 - Dashboard widgets and the dashboard preset "Content maintenance"
 - Site set "Content Reminder" with the setting `contentReminder.assignableGroups`
 
+[Unreleased]: https://github.com/format-gmbh/content-reminder/compare/0.1.0...main
 [0.1.0]: https://github.com/format-gmbh/content-reminder/releases/tag/0.1.0

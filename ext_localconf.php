@@ -4,6 +4,10 @@ declare(strict_types=1);
 
 defined('TYPO3') or die();
 
+// Templates of the weekly mail (FluidEmail)
+$GLOBALS['TYPO3_CONF_VARS']['MAIL']['templateRootPaths'][1791100100]
+    = 'EXT:content_reminder/Resources/Private/Templates/Email/';
+
 // Enforce the permission matrix for all write access through the DataHandler
 $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_tcemain.php']['processDatamapClass']['content_reminder']
     = \Formatsoft\ContentReminder\Hooks\DataHandlerHook::class;

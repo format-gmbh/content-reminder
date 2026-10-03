@@ -1,0 +1,29 @@
+"pages",,,,,,,
+,"uid","pid","title","doktype","deleted","sys_language_uid","hidden"
+,1,0,"Site root",1,0,0,0
+,2,1,"Prices",1,0,0,0
+,3,2,"Hidden subpage",1,0,0,1
+,4,1,"Deleted page",1,1,0,0
+,10,0,"Other site",1,0,0,0
+"be_users",,,,,,,
+,"uid","pid","username","realName","email","lang","disable","uc"
+,2,0,"editor","Eddi Editor","eddi@example.org","de",0,""
+,3,0,"colleague","Carla Colleague","","en",0,""
+,4,0,"optedout","Otto Opted-Out","otto@example.org","en",0,"a:1:{s:25:""contentReminderMailOptOut"";i:1;}"
+,5,0,"disabled","Dora Disabled","dora@example.org","en",1,""
+,6,0,"english","Emma English","emma@example.org","default",0,""
+"tx_contentreminder_reminder",,,,,,,
+,"uid","pid","title","due_date","assignee","creator","status","hidden"
+,1,2,"Overdue for editor","2026-09-30",2,2,0,0
+,2,3,"No date on hidden page",\NULL,2,2,0,0
+,3,2,"Due in 5 days","2026-10-08",2,2,0,0
+,4,2,"Due in 10 days","2026-10-13",2,2,0,0
+,5,2,"Done","2026-09-30",2,2,1,0
+,6,2,"Paused","2026-09-30",2,2,0,1
+,7,4,"On deleted page","2026-09-30",2,2,0,0
+,8,10,"Other site","2026-09-30",2,2,0,0
+,9,2,"Unassigned",\NULL,0,2,0,0
+,10,2,"Colleague without email",\NULL,3,2,0,0
+,11,2,"Opted out",\NULL,4,2,0,0
+,12,2,"Disabled user",\NULL,5,2,0,0
+,13,1,"For Emma","2026-10-03",6,2,0,0

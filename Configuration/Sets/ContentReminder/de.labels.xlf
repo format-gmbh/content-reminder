@@ -19,6 +19,86 @@
 				<source>Comma-separated list of be_groups uids. Only members of these groups can be assigned. Empty = all active backend users.</source>
 				<target>Kommagetrennte Liste von be_groups-uids. Nur Mitglieder dieser Gruppen können zugewiesen werden. Leer = alle aktiven Backend-Benutzer.</target>
 			</trans-unit>
+			<trans-unit id="categories.contentReminder.mail" approved="yes">
+				<source>Weekly email</source>
+				<target>Wöchentliche E-Mail</target>
+			</trans-unit>
+			<trans-unit id="settings.contentReminder.mail.enabled" approved="yes">
+				<source>Send weekly email</source>
+				<target>Wöchentliche E-Mail versenden</target>
+			</trans-unit>
+			<trans-unit id="settings.description.contentReminder.mail.enabled" approved="yes">
+				<source>Requires the scheduler task "content-reminder:send-weekly-mail" running daily.</source>
+				<target>Voraussetzung ist der täglich laufende Scheduler-Task „content-reminder:send-weekly-mail“.</target>
+			</trans-unit>
+			<trans-unit id="settings.contentReminder.mail.weekday" approved="yes">
+				<source>Weekday</source>
+				<target>Versandtag</target>
+			</trans-unit>
+			<trans-unit id="settings.contentReminder.mail.weekday.enum.monday" approved="yes">
+				<source>Monday</source>
+				<target>Montag</target>
+			</trans-unit>
+			<trans-unit id="settings.contentReminder.mail.weekday.enum.tuesday" approved="yes">
+				<source>Tuesday</source>
+				<target>Dienstag</target>
+			</trans-unit>
+			<trans-unit id="settings.contentReminder.mail.weekday.enum.wednesday" approved="yes">
+				<source>Wednesday</source>
+				<target>Mittwoch</target>
+			</trans-unit>
+			<trans-unit id="settings.contentReminder.mail.weekday.enum.thursday" approved="yes">
+				<source>Thursday</source>
+				<target>Donnerstag</target>
+			</trans-unit>
+			<trans-unit id="settings.contentReminder.mail.weekday.enum.friday" approved="yes">
+				<source>Friday</source>
+				<target>Freitag</target>
+			</trans-unit>
+			<trans-unit id="settings.contentReminder.mail.weekday.enum.saturday" approved="yes">
+				<source>Saturday</source>
+				<target>Samstag</target>
+			</trans-unit>
+			<trans-unit id="settings.contentReminder.mail.weekday.enum.sunday" approved="yes">
+				<source>Sunday</source>
+				<target>Sonntag</target>
+			</trans-unit>
+			<trans-unit id="settings.contentReminder.mail.fromAddress" approved="yes">
+				<source>Sender address</source>
+				<target>Absender-Adresse</target>
+			</trans-unit>
+			<trans-unit id="settings.description.contentReminder.mail.fromAddress" approved="yes">
+				<source>Empty = default sender of the installation (MAIL.defaultMailFromAddress).</source>
+				<target>Leer = Standard-Absender der Installation (MAIL.defaultMailFromAddress).</target>
+			</trans-unit>
+			<trans-unit id="settings.contentReminder.mail.fromName" approved="yes">
+				<source>Sender name</source>
+				<target>Absender-Name</target>
+			</trans-unit>
+			<trans-unit id="settings.contentReminder.mail.unassignedRecipient" approved="yes">
+				<source>Recipient for reminders without responsible person</source>
+				<target>Empfänger für Erinnerungen ohne Zuständigkeit</target>
+			</trans-unit>
+			<trans-unit id="settings.description.contentReminder.mail.unassignedRecipient" approved="yes">
+				<source>Empty = unassigned reminders are not mailed.</source>
+				<target>Leer = Erinnerungen ohne Zuständigkeit werden nicht verschickt.</target>
+			</trans-unit>
+			<trans-unit id="settings.contentReminder.mail.lookaheadDays" approved="yes">
+				<source>Days to look ahead</source>
+				<target>Vorschau in Tagen</target>
+			</trans-unit>
+			<trans-unit id="settings.description.contentReminder.mail.lookaheadDays" approved="yes">
+				<source>Reminders due within this number of days are included in addition to overdue ones.</source>
+				<target>Zusätzlich zu überfälligen Erinnerungen werden die in diesem Zeitraum fälligen aufgeführt.</target>
+			</trans-unit>
+			<trans-unit id="settings.contentReminder.backendUrl" approved="yes">
+				<source>Backend URL for links in emails</source>
+				<target>Backend-URL für Links in E-Mails</target>
+			</trans-unit>
+			<trans-unit id="settings.description.contentReminder.backendUrl" approved="yes">
+				<source>Empty = derived from the site base, e.g. https://example.org/typo3</source>
+				<target>Leer = aus der Site-Basis abgeleitet, z. B. https://example.org/typo3</target>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

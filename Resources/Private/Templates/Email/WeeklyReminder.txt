@@ -1,0 +1,17 @@
+<f:layout name="SystemEmail" />
+<f:section name="Title">{headline}</f:section>
+<f:section name="Main"><f:variable name="ll" value="LLL:EXT:content_reminder/Resources/Private/Language/locallang_mail.xlf:" /><f:if condition="{mail.unassignedDigest}"><f:then><f:translate key="{ll}intro.unassigned" languageKey="{language}" arguments="{0: mail.siteTitle}" /></f:then><f:else><f:translate key="{ll}intro" languageKey="{language}" arguments="{0: mail.recipientName, 1: mail.siteTitle}" /></f:else></f:if>
+<f:if condition="{mail.overdue}">
+
+<f:translate key="{ll}section.overdue" languageKey="{language}" /> ({mail.overdue -> f:count()})
+<f:render section="List" arguments="{items: mail.overdue, ll: ll, language: language}" /></f:if><f:if condition="{mail.upcoming}">
+
+<f:translate key="{ll}section.upcoming" languageKey="{language}" arguments="{0: lookaheadDays}" /> ({mail.upcoming -> f:count()})
+<f:render section="List" arguments="{items: mail.upcoming, ll: ll, language: language}" /></f:if>
+
+<f:translate key="{ll}footer" languageKey="{language}" /></f:section>
+<f:section name="List"><f:for each="{items}" as="item">
+- {item.title}
+  {item.pageTitle} · <f:if condition="{item.dueDate}"><f:then><f:translate key="{ll}dueOn" languageKey="{language}" arguments="{0: item.dueDate}" /></f:then><f:else><f:translate key="{ll}noDueDate" languageKey="{language}" /></f:else></f:if><f:if condition="{item.url}">
+  {item.url}</f:if>
+</f:for></f:section>

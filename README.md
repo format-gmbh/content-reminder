@@ -31,6 +31,10 @@ content such as prices, seasonal notes or contact persons stays up to date.
 - **Dashboard**: widgets *My reminders*, *All reminders*, *Without
   responsible person*, *Overdue*, *Recently completed*, a counter and a status
   chart – and the dashboard preset *Content maintenance*.
+- **Weekly email**: on a configurable weekday every responsible person gets
+  one email per site with their overdue reminders and those due within the
+  next days (German or English, depending on the user's backend language).
+  Users can opt out in their user settings.
 
 ## Installation
 
@@ -77,9 +81,37 @@ person without access to the page, it is saved with a warning.
 
 ## Configuration (site settings)
 
+Add the site set **Content Reminder** (`formatsoft/content-reminder`) as a
+dependency of your site to edit these settings in the backend.
+
 | Setting | Default | Description |
 |---|---|---|
 | `contentReminder.assignableGroups` | empty (all) | Comma-separated list of backend user group uids whose members can be assigned |
+| `contentReminder.backendUrl` | derived from site base | Backend URL for links in emails, e.g. `https://example.org/typo3`. Required if the site base has no domain (e.g. `/`). |
+| `contentReminder.mail.enabled` | `true` | Send the weekly email for this site |
+| `contentReminder.mail.weekday` | `monday` | Weekday of the weekly email |
+| `contentReminder.mail.lookaheadDays` | `7` | Reminders due within this number of days are included in addition to overdue ones |
+| `contentReminder.mail.fromAddress` / `fromName` | system default | Sender of the weekly email |
+| `contentReminder.mail.unassignedRecipient` | empty | Address that receives the reminders without responsible person; empty = not mailed |
+
+## Weekly email
+
+The command `content-reminder:send-weekly-mail` sends the emails. Run it
+**daily**, e.g. with the scheduler task *Execute console commands*: each site
+is processed on its configured weekday and at most once per day.
+
+```bash
+# What would be sent (ignores weekday and "already sent today")
+vendor/bin/typo3 content-reminder:send-weekly-mail --dry-run --force
+
+# Send now for one site
+vendor/bin/typo3 content-reminder:send-weekly-mail --site=main --force
+```
+
+Recipients are the responsible persons with a valid email address who have
+not opted out (*User settings → Do not send me the weekly email with due
+reminders*). Reminders without responsible person are sent to
+`contentReminder.mail.unassignedRecipient`, if set.
 
 ## Development
 

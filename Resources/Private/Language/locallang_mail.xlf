@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+	<file source-language="en" datatype="plaintext" original="EXT:content_reminder/Resources/Private/Language/locallang_mail.xlf" product-name="content_reminder">
+		<header/>
+		<body>
+			<trans-unit id="subject">
+				<source>%1$s: %2$d reminder(s) due</source>
+			</trans-unit>
+			<trans-unit id="subject.unassigned">
+				<source>%1$s: %2$d reminder(s) without responsible person</source>
+			</trans-unit>
+			<trans-unit id="intro">
+				<source>Hello %1$s, these reminders on the website "%2$s" need your attention:</source>
+			</trans-unit>
+			<trans-unit id="intro.unassigned">
+				<source>These reminders on the website "%1$s" are due, but nobody is responsible for them yet:</source>
+			</trans-unit>
+			<trans-unit id="section.overdue">
+				<source>Overdue</source>
+			</trans-unit>
+			<trans-unit id="section.upcoming">
+				<source>Due now or within the next %d days</source>
+			</trans-unit>
+			<trans-unit id="dueOn">
+				<source>due on %s</source>
+			</trans-unit>
+			<trans-unit id="noDueDate">
+				<source>no due date (due now)</source>
+			</trans-unit>
+			<trans-unit id="footer">
+				<source>You receive this email because reminders are assigned to you in TYPO3. You can switch it off in your user settings.</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

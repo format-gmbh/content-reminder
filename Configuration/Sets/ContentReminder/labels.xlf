@@ -15,6 +15,66 @@
 			<trans-unit id="settings.description.contentReminder.assignableGroups">
 				<source>Comma-separated list of be_groups uids. Only members of these groups can be assigned. Empty = all active backend users.</source>
 			</trans-unit>
+			<trans-unit id="categories.contentReminder.mail">
+				<source>Weekly email</source>
+			</trans-unit>
+			<trans-unit id="settings.contentReminder.mail.enabled">
+				<source>Send weekly email</source>
+			</trans-unit>
+			<trans-unit id="settings.description.contentReminder.mail.enabled">
+				<source>Requires the scheduler task "content-reminder:send-weekly-mail" running daily.</source>
+			</trans-unit>
+			<trans-unit id="settings.contentReminder.mail.weekday">
+				<source>Weekday</source>
+			</trans-unit>
+			<trans-unit id="settings.contentReminder.mail.weekday.enum.monday">
+				<source>Monday</source>
+			</trans-unit>
+			<trans-unit id="settings.contentReminder.mail.weekday.enum.tuesday">
+				<source>Tuesday</source>
+			</trans-unit>
+			<trans-unit id="settings.contentReminder.mail.weekday.enum.wednesday">
+				<source>Wednesday</source>
+			</trans-unit>
+			<trans-unit id="settings.contentReminder.mail.weekday.enum.thursday">
+				<source>Thursday</source>
+			</trans-unit>
+			<trans-unit id="settings.contentReminder.mail.weekday.enum.friday">
+				<source>Friday</source>
+			</trans-unit>
+			<trans-unit id="settings.contentReminder.mail.weekday.enum.saturday">
+				<source>Saturday</source>
+			</trans-unit>
+			<trans-unit id="settings.contentReminder.mail.weekday.enum.sunday">
+				<source>Sunday</source>
+			</trans-unit>
+			<trans-unit id="settings.contentReminder.mail.fromAddress">
+				<source>Sender address</source>
+			</trans-unit>
+			<trans-unit id="settings.description.contentReminder.mail.fromAddress">
+				<source>Empty = default sender of the installation (MAIL.defaultMailFromAddress).</source>
+			</trans-unit>
+			<trans-unit id="settings.contentReminder.mail.fromName">
+				<source>Sender name</source>
+			</trans-unit>
+			<trans-unit id="settings.contentReminder.mail.unassignedRecipient">
+				<source>Recipient for reminders without responsible person</source>
+			</trans-unit>
+			<trans-unit id="settings.description.contentReminder.mail.unassignedRecipient">
+				<source>Empty = unassigned reminders are not mailed.</source>
+			</trans-unit>
+			<trans-unit id="settings.contentReminder.mail.lookaheadDays">
+				<source>Days to look ahead</source>
+			</trans-unit>
+			<trans-unit id="settings.description.contentReminder.mail.lookaheadDays">
+				<source>Reminders due within this number of days are included in addition to overdue ones.</source>
+			</trans-unit>
+			<trans-unit id="settings.contentReminder.backendUrl">
+				<source>Backend URL for links in emails</source>
+			</trans-unit>
+			<trans-unit id="settings.description.contentReminder.backendUrl">
+				<source>Empty = derived from the site base, e.g. https://example.org/typo3</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

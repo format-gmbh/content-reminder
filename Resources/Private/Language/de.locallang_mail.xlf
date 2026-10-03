@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+	<file source-language="en" target-language="de" datatype="plaintext" original="EXT:content_reminder/Resources/Private/Language/locallang_mail.xlf" product-name="content_reminder">
+		<header/>
+		<body>
+			<trans-unit id="subject" approved="yes">
+				<source>%1$s: %2$d reminder(s) due</source>
+				<target>%1$s: %2$d fällige Erinnerung(en)</target>
+			</trans-unit>
+			<trans-unit id="subject.unassigned" approved="yes">
+				<source>%1$s: %2$d reminder(s) without responsible person</source>
+				<target>%1$s: %2$d Erinnerung(en) ohne Zuständigkeit</target>
+			</trans-unit>
+			<trans-unit id="intro" approved="yes">
+				<source>Hello %1$s, these reminders on the website "%2$s" need your attention:</source>
+				<target>Hallo %1$s, diese Erinnerungen auf der Website „%2$s“ brauchen Ihre Aufmerksamkeit:</target>
+			</trans-unit>
+			<trans-unit id="intro.unassigned" approved="yes">
+				<source>These reminders on the website "%1$s" are due, but nobody is responsible for them yet:</source>
+				<target>Diese Erinnerungen auf der Website „%1$s“ sind fällig, aber noch niemand ist dafür zuständig:</target>
+			</trans-unit>
+			<trans-unit id="section.overdue" approved="yes">
+				<source>Overdue</source>
+				<target>Überfällig</target>
+			</trans-unit>
+			<trans-unit id="section.upcoming" approved="yes">
+				<source>Due now or within the next %d days</source>
+				<target>Jetzt fällig oder in den nächsten %d Tagen</target>
+			</trans-unit>
+			<trans-unit id="dueOn" approved="yes">
+				<source>due on %s</source>
+				<target>fällig am %s</target>
+			</trans-unit>
+			<trans-unit id="noDueDate" approved="yes">
+				<source>no due date (due now)</source>
+				<target>ohne Termin (sofort fällig)</target>
+			</trans-unit>
+			<trans-unit id="footer" approved="yes">
+				<source>You receive this email because reminders are assigned to you in TYPO3. You can switch it off in your user settings.</source>
+				<target>Sie erhalten diese E-Mail, weil Ihnen in TYPO3 Erinnerungen zugewiesen sind. Sie können sie in Ihren Benutzereinstellungen abschalten.</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

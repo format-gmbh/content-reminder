@@ -25,6 +25,8 @@ return static function (ContainerConfigurator $container): void {
         ->exclude([
             '../Classes/Domain/Model/*',
             '../Classes/Exception/*',
+            '../Classes/Mail/WeeklyMail.php',
+            '../Classes/Mail/WeeklyMailSettings.php',
             // Widgets need their configuration and are registered below
             '../Classes/Dashboard/Widget/*',
         ]);

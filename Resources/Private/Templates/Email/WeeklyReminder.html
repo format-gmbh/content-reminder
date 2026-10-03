@@ -1,0 +1,53 @@
+<f:layout name="SystemEmail" />
+
+<f:section name="Title">{headline}</f:section>
+
+<f:section name="Main"><f:variable name="ll" value="LLL:EXT:content_reminder/Resources/Private/Language/locallang_mail.xlf:" />
+    <p>
+        <f:if condition="{mail.unassignedDigest}">
+            <f:then><f:translate key="{ll}intro.unassigned" languageKey="{language}" arguments="{0: mail.siteTitle}" /></f:then>
+            <f:else><f:translate key="{ll}intro" languageKey="{language}" arguments="{0: mail.recipientName, 1: mail.siteTitle}" /></f:else>
+        </f:if>
+    </p>
+
+    <f:if condition="{mail.overdue}">
+        <h3 style="color: #c83c3c;"><f:translate key="{ll}section.overdue" languageKey="{language}" /> ({mail.overdue -> f:count()})</h3>
+        <f:render section="List" arguments="{items: mail.overdue, ll: ll, language: language}" />
+    </f:if>
+
+    <f:if condition="{mail.upcoming}">
+        <h3><f:translate key="{ll}section.upcoming" languageKey="{language}" arguments="{0: lookaheadDays}" /> ({mail.upcoming -> f:count()})</h3>
+        <f:render section="List" arguments="{items: mail.upcoming, ll: ll, language: language}" />
+    </f:if>
+
+    <p style="font-size: 12px; color: #737373;">
+        <f:translate key="{ll}footer" languageKey="{language}" />
+    </p>
+</f:section>
+
+<f:section name="List">
+    <table cellpadding="0" cellspacing="0" border="0" width="100%" style="margin-bottom: 16px;">
+        <f:for each="{items}" as="item">
+            <tr>
+                <td style="padding: 8px 0; border-bottom: 1px solid #e5e5e5;">
+                    <strong>
+                        <f:if condition="{item.url}">
+                            <f:then><a href="{item.url}">{item.title}</a></f:then>
+                            <f:else>{item.title}</f:else>
+                        </f:if>
+                    </strong><br />
+                    <span style="font-size: 13px; color: #555555;">
+                        {item.pageTitle} ·
+                        <f:if condition="{item.dueDate}">
+                            <f:then><f:translate key="{ll}dueOn" languageKey="{language}" arguments="{0: item.dueDate}" /></f:then>
+                            <f:else><f:translate key="{ll}noDueDate" languageKey="{language}" /></f:else>
+                        </f:if>
+                    </span>
+                    <f:if condition="{item.notes}">
+                        <br /><span style="font-size: 13px;">{item.notes -> f:format.crop(maxCharacters: 300) -> f:format.nl2br()}</span>
+                    </f:if>
+                </td>
+            </tr>
+        </f:for>
+    </table>
+</f:section>

@@ -300,6 +300,9 @@
 			<trans-unit id="widget.empty.overdue">
 				<source>No reminder is overdue.</source>
 			</trans-unit>
+			<trans-unit id="userSettings.mailOptOut">
+				<source>Do not send me the weekly email with due reminders</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

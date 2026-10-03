@@ -188,6 +188,36 @@ final readonly class ReminderRepository
     }
 
     /**
+     * Open, not paused reminders on the given pages that are due until the given day
+     * (inclusive) or have no due date. Used for the weekly mail.
+     *
+     * @param list<int> $pageUids
+     * @return list<Reminder>
+     */
+    public function findDueOnPagesUntil(array $pageUids, \DateTimeImmutable $until): array
+    {
+        $pageUids = array_values(array_unique(array_filter(array_map(intval(...), $pageUids), static fn(int $uid): bool => $uid > 0)));
+        $reminders = [];
+        foreach (array_chunk($pageUids, 1000) as $chunk) {
+            $queryBuilder = $this->createQueryBuilder();
+            $rows = $queryBuilder
+                ->select('*')
+                ->from(Reminder::TABLE)
+                ->where(
+                    $queryBuilder->expr()->in('pid', $queryBuilder->createNamedParameter($chunk, ArrayParameterType::INTEGER)),
+                    $queryBuilder->expr()->eq('status', $queryBuilder->createNamedParameter(ReminderStatus::Open->value, Connection::PARAM_INT)),
+                    $this->dueConstraint($queryBuilder, $queryBuilder->createNamedParameter($until->format('Y-m-d'))),
+                )
+                ->executeQuery()
+                ->fetchAllAssociative();
+            foreach ($rows as $row) {
+                $reminders[] = Reminder::fromDatabaseRow($row);
+            }
+        }
+        return $this->sortByDueDate($reminders);
+    }
+
+    /**
      * All reminders of a page, including done and paused ones.
      */
     public function countOnPage(int $pageUid): int
