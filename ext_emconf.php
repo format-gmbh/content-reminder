@@ -7,7 +7,7 @@ $EM_CONF[$_EXTKEY] = [
     'description' => 'Reminders for TYPO3 pages: due dates, recurrence, assignment and archive to keep content up to date',
     'category' => 'be',
     'state' => 'beta',
-    'version' => '0.1.0',
+    'version' => '0.2.0',
     'author' => 'Andreas Kessel',
     'author_company' => 'format Software GmbH',
     'constraints' => [
@@ -18,6 +18,8 @@ $EM_CONF[$_EXTKEY] = [
             'dashboard' => '13.4.0-14.99.99',
         ],
         'conflicts' => [],
-        'suggests' => [],
+        'suggests' => [
+            'scheduler' => '13.4.0-14.99.99',
+        ],
     ],
 ];
