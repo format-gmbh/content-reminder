@@ -21,6 +21,7 @@ use TYPO3\CMS\Backend\Template\Components\ComponentFactory;
 use TYPO3\CMS\Backend\Utility\BackendUtility;
 use TYPO3\CMS\Core\Attribute\AsEventListener;
 use TYPO3\CMS\Core\Authentication\BackendUserAuthentication;
+use TYPO3\CMS\Core\Domain\RecordInterface;
 use TYPO3\CMS\Core\Imaging\IconFactory;
 use TYPO3\CMS\Core\Imaging\IconSize;
 use TYPO3\CMS\Core\Localization\LanguageService;
@@ -47,10 +48,13 @@ final readonly class RecordListRecordActions
 
     public function __invoke(ModifyRecordListRecordActionsEvent $event): void
     {
-        $isV14 = method_exists($event, 'getActionGroup');
+        // TYPO3 v14 passes a RecordInterface and works with button components,
+        // v13 passes the record as array and works with HTML strings
+        $record = $event->getRecord();
+        $isV14 = $record instanceof RecordInterface;
         [$table, $uid] = $isV14
-            ? [$event->getRecord()->getMainType(), $event->getRecord()->getUid()]
-            : [$event->getTable(), (int)($event->getRecord()['uid'] ?? 0)];
+            ? [$record->getMainType(), $record->getUid()]
+            : [$event->getTable(), (int)($record['uid'] ?? 0)];
         $user = $GLOBALS['BE_USER'] ?? null;
         if ($table !== Reminder::TABLE || !$user instanceof BackendUserAuthentication) {
             return;
@@ -63,8 +67,13 @@ final readonly class RecordListRecordActions
 
         $actions = $this->collectActions($reminder, $user, $page);
         if (!$isV14) {
+            foreach (self::PRIMARY_ACTIONS as $name) {
+                $html = isset($actions[$name]) ? $this->renderHtml($actions[$name]) : $this->renderPlaceholderHtml();
+                $event->setAction($html, $name, 'primary');
+                unset($actions[$name]);
+            }
             foreach ($actions as $name => $action) {
-                $event->setAction($this->renderHtml($action), $name, $action['primary'] ? 'primary' : 'secondary');
+                $event->setAction($this->renderHtml($action), $name, 'secondary');
             }
             return;
         }
@@ -164,6 +173,16 @@ final readonly class RecordListRecordActions
             GeneralUtility::implodeAttributes($action['attributes'], true),
             $this->iconFactory->getIcon($action['icon'], IconSize::SMALL)->render()
         );
+    }
+
+    /**
+     * Empty slot like the core uses for actions that are not available (TYPO3 v13).
+     */
+    private function renderPlaceholderHtml(): string
+    {
+        return '<span class="btn btn-default disabled" aria-hidden="true">'
+            . $this->iconFactory->getIcon('empty-empty', IconSize::SMALL)->render()
+            . '</span>';
     }
 
     private function getLanguageService(): LanguageService
