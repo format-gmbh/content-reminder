@@ -303,6 +303,9 @@
 			<trans-unit id="userSettings.mailOptOut">
 				<source>Do not send me the weekly email with due reminders</source>
 			</trans-unit>
+			<trans-unit id="button.newReminder">
+				<source>Create reminder for this page</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

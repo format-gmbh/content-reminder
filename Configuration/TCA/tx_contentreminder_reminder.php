@@ -99,7 +99,9 @@ $tca = [
                     ['label' => $ll . '.assignee.unassigned', 'value' => 0],
                 ],
                 'foreign_table' => 'be_users',
-                'foreign_table_where' => 'AND {#be_users}.{#disable} = 0 AND {#be_users}.{#username} NOT LIKE \'\\_cli\\_%\' ORDER BY {#be_users}.{#realName}, {#be_users}.{#username}',
+                // No ORDER BY here: TYPO3 appends further conditions after foreign_table_where
+                'foreign_table_where' => 'AND {#be_users}.{#disable} = 0 AND {#be_users}.{#username} NOT LIKE \'\\_cli\\_%\'',
+                'sortItems' => ['label' => 'asc'],
                 'default' => 0,
             ],
         ],

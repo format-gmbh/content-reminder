@@ -403,6 +403,10 @@
 				<source>Do not send me the weekly email with due reminders</source>
 				<target>Keine wöchentliche E-Mail mit fälligen Erinnerungen senden</target>
 			</trans-unit>
+			<trans-unit id="button.newReminder" approved="yes">
+				<source>Create reminder for this page</source>
+				<target>Erinnerung für diese Seite erstellen</target>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

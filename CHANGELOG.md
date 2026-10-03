@@ -14,6 +14,12 @@ versions follow [Semantic Versioning](https://semver.org/).
 - Site settings for the weekly email (weekday, lookahead, sender, recipient for
   unassigned reminders) and `contentReminder.backendUrl`
 - User setting to opt out of the weekly email
+- Button "Create reminder for this page" in the button bar of the page module
+
+### Fixed
+
+- Editing form: the list of responsible persons failed with an SQL error
+  (ORDER BY in foreign_table_where)
 
 ## [0.1.0] - 2026-10-03
 
