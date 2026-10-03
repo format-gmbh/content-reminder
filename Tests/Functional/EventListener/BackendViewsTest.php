@@ -23,6 +23,7 @@ use TYPO3\CMS\Core\Context\DateTimeAspect;
 use TYPO3\CMS\Core\Core\SystemEnvironmentBuilder;
 use TYPO3\CMS\Core\Http\NormalizedParams;
 use TYPO3\CMS\Core\Http\ServerRequest;
+use TYPO3\CMS\Core\Information\Typo3Version;
 use TYPO3\CMS\Core\Localization\LanguageServiceFactory;
 use TYPO3\CMS\Core\Type\ContextualFeedbackSeverity;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
@@ -138,7 +139,11 @@ final class BackendViewsTest extends FunctionalTestCase
             static fn(int $uid): array => ['identifier' => (string)$uid, '_page' => BackendUtility::getRecord('pages', $uid)],
             $pageUids
         );
-        $event = new AfterPageTreeItemsPreparedEvent(null, null, $items);
+        // Constructor: (request, searchQuery, items) in TYPO3 v14, (request, items) in v13
+        $request = new ServerRequest('https://example.test/typo3/ajax/page/tree/fetchData');
+        $event = (new Typo3Version())->getMajorVersion() >= 14
+            ? new AfterPageTreeItemsPreparedEvent($request, null, $items)
+            : new AfterPageTreeItemsPreparedEvent($request, $items);
         $this->get(PageTreeMarker::class)($event);
         return $event->getItems();
     }
