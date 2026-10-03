@@ -11,6 +11,7 @@ declare(strict_types=1);
 
 namespace Formatsoft\ContentReminder\Domain\Repository;
 
+use Doctrine\DBAL\ArrayParameterType;
 use TYPO3\CMS\Core\Database\Connection;
 use TYPO3\CMS\Core\Database\ConnectionPool;
 use TYPO3\CMS\Core\Database\Query\QueryHelper;
@@ -109,6 +110,39 @@ final readonly class ReminderLogRepository
             $queryBuilder->andWhere($pagePermsClause);
         }
         return $queryBuilder->executeQuery()->fetchAllAssociative();
+    }
+
+    /**
+     * Archive entries of the given pages for the backend module, newest first.
+     *
+     * @param list<int> $pageUids
+     * @return list<array<string, mixed>>
+     */
+    public function findForPages(array $pageUids, ?int $completedBy, ?\DateTimeImmutable $since, int $limit): array
+    {
+        $pageUids = array_values(array_unique(array_filter(array_map(intval(...), $pageUids), static fn(int $uid): bool => $uid > 0)));
+        $entries = [];
+        foreach (array_chunk($pageUids, 1000) as $chunk) {
+            $queryBuilder = $this->connectionPool->getQueryBuilderForTable(self::TABLE);
+            $constraints = [$queryBuilder->expr()->in('page', $queryBuilder->createNamedParameter($chunk, ArrayParameterType::INTEGER))];
+            if ($completedBy !== null) {
+                $constraints[] = $queryBuilder->expr()->eq('completed_by', $queryBuilder->createNamedParameter($completedBy, Connection::PARAM_INT));
+            }
+            if ($since !== null) {
+                $constraints[] = $queryBuilder->expr()->gte('completed_at', $queryBuilder->createNamedParameter($since->getTimestamp(), Connection::PARAM_INT));
+            }
+            $entries = [...$entries, ...$queryBuilder
+                ->select('*')
+                ->from(self::TABLE)
+                ->where(...$constraints)
+                ->orderBy('completed_at', 'DESC')
+                ->addOrderBy('uid', 'DESC')
+                ->setMaxResults($limit + 1)
+                ->executeQuery()
+                ->fetchAllAssociative()];
+        }
+        usort($entries, static fn(array $a, array $b): int => [(int)$b['completed_at'], (int)$b['uid']] <=> [(int)$a['completed_at'], (int)$a['uid']]);
+        return $entries;
     }
 
     public function countByPage(int $pageUid): int

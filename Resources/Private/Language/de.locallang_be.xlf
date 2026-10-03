@@ -407,6 +407,170 @@
 				<source>Create reminder for this page</source>
 				<target>Erinnerung für diese Seite erstellen</target>
 			</trans-unit>
+			<trans-unit id="module.title" approved="yes">
+				<source>Reminders</source>
+				<target>Erinnerungen</target>
+			</trans-unit>
+			<trans-unit id="module.allPages" approved="yes">
+				<source>All pages</source>
+				<target>Alle Seiten</target>
+			</trans-unit>
+			<trans-unit id="module.view.reminders" approved="yes">
+				<source>Reminders</source>
+				<target>Erinnerungen</target>
+			</trans-unit>
+			<trans-unit id="module.view.archive" approved="yes">
+				<source>Completions</source>
+				<target>Erledigungen</target>
+			</trans-unit>
+			<trans-unit id="module.filter.depth" approved="yes">
+				<source>Pages</source>
+				<target>Seiten</target>
+			</trans-unit>
+			<trans-unit id="module.filter.depth.subpages" approved="yes">
+				<source>This page and subpages</source>
+				<target>Diese Seite und Unterseiten</target>
+			</trans-unit>
+			<trans-unit id="module.filter.depth.page" approved="yes">
+				<source>Only this page</source>
+				<target>Nur diese Seite</target>
+			</trans-unit>
+			<trans-unit id="module.filter.assignee" approved="yes">
+				<source>Responsible</source>
+				<target>Zuständig</target>
+			</trans-unit>
+			<trans-unit id="module.filter.completedBy" approved="yes">
+				<source>Completed by</source>
+				<target>Erledigt von</target>
+			</trans-unit>
+			<trans-unit id="module.filter.assignee.all" approved="yes">
+				<source>Everybody</source>
+				<target>Alle</target>
+			</trans-unit>
+			<trans-unit id="module.filter.assignee.me" approved="yes">
+				<source>Me</source>
+				<target>Ich</target>
+			</trans-unit>
+			<trans-unit id="module.filter.assignee.unassigned" approved="yes">
+				<source>Not assigned</source>
+				<target>Nicht zugewiesen</target>
+			</trans-unit>
+			<trans-unit id="module.filter.state" approved="yes">
+				<source>State</source>
+				<target>Status</target>
+			</trans-unit>
+			<trans-unit id="module.filter.state.open" approved="yes">
+				<source>Open (incl. paused)</source>
+				<target>Offen (inkl. pausierte)</target>
+			</trans-unit>
+			<trans-unit id="module.filter.state.due" approved="yes">
+				<source>Due</source>
+				<target>Fällig</target>
+			</trans-unit>
+			<trans-unit id="module.filter.state.overdue" approved="yes">
+				<source>Overdue</source>
+				<target>Überfällig</target>
+			</trans-unit>
+			<trans-unit id="module.filter.state.upcoming" approved="yes">
+				<source>Due within 30 days</source>
+				<target>In den nächsten 30 Tagen fällig</target>
+			</trans-unit>
+			<trans-unit id="module.filter.state.paused" approved="yes">
+				<source>Paused</source>
+				<target>Pausiert</target>
+			</trans-unit>
+			<trans-unit id="module.filter.state.done" approved="yes">
+				<source>Done</source>
+				<target>Erledigt</target>
+			</trans-unit>
+			<trans-unit id="module.filter.state.all" approved="yes">
+				<source>All</source>
+				<target>Alle</target>
+			</trans-unit>
+			<trans-unit id="module.filter.period" approved="yes">
+				<source>Period</source>
+				<target>Zeitraum</target>
+			</trans-unit>
+			<trans-unit id="module.filter.period.30" approved="yes">
+				<source>Last 30 days</source>
+				<target>Letzte 30 Tage</target>
+			</trans-unit>
+			<trans-unit id="module.filter.period.90" approved="yes">
+				<source>Last 90 days</source>
+				<target>Letzte 90 Tage</target>
+			</trans-unit>
+			<trans-unit id="module.filter.period.365" approved="yes">
+				<source>Last 12 months</source>
+				<target>Letzte 12 Monate</target>
+			</trans-unit>
+			<trans-unit id="module.filter.period.all" approved="yes">
+				<source>All time</source>
+				<target>Gesamter Zeitraum</target>
+			</trans-unit>
+			<trans-unit id="module.filter.apply" approved="yes">
+				<source>Apply</source>
+				<target>Anwenden</target>
+			</trans-unit>
+			<trans-unit id="module.column.title" approved="yes">
+				<source>Reminder</source>
+				<target>Erinnerung</target>
+			</trans-unit>
+			<trans-unit id="module.column.page" approved="yes">
+				<source>Page</source>
+				<target>Seite</target>
+			</trans-unit>
+			<trans-unit id="module.column.dueDate" approved="yes">
+				<source>Due</source>
+				<target>Fällig</target>
+			</trans-unit>
+			<trans-unit id="module.column.recurrence" approved="yes">
+				<source>Repeat</source>
+				<target>Wiederholung</target>
+			</trans-unit>
+			<trans-unit id="module.column.assignee" approved="yes">
+				<source>Responsible</source>
+				<target>Zuständig</target>
+			</trans-unit>
+			<trans-unit id="module.column.state" approved="yes">
+				<source>State</source>
+				<target>Status</target>
+			</trans-unit>
+			<trans-unit id="module.state.notDue" approved="yes">
+				<source>Not yet due</source>
+				<target>Noch nicht fällig</target>
+			</trans-unit>
+			<trans-unit id="module.state.due" approved="yes">
+				<source>Due</source>
+				<target>Fällig</target>
+			</trans-unit>
+			<trans-unit id="module.state.overdue" approved="yes">
+				<source>Overdue</source>
+				<target>Überfällig</target>
+			</trans-unit>
+			<trans-unit id="module.state.paused" approved="yes">
+				<source>Paused</source>
+				<target>Pausiert</target>
+			</trans-unit>
+			<trans-unit id="module.state.done" approved="yes">
+				<source>Done</source>
+				<target>Erledigt</target>
+			</trans-unit>
+			<trans-unit id="module.empty" approved="yes">
+				<source>No reminders match the filter.</source>
+				<target>Keine Erinnerungen passen zum Filter.</target>
+			</trans-unit>
+			<trans-unit id="module.emptyArchive" approved="yes">
+				<source>No completions match the filter.</source>
+				<target>Keine Erledigungen passen zum Filter.</target>
+			</trans-unit>
+			<trans-unit id="module.limitReached" approved="yes">
+				<source>Only the first %d entries are shown. Narrow down the filter to see more.</source>
+				<target>Es werden nur die ersten %d Einträge angezeigt. Grenzen Sie den Filter ein, um weitere zu sehen.</target>
+			</trans-unit>
+			<trans-unit id="module.count" approved="yes">
+				<source>Entries: %d</source>
+				<target>Einträge: %d</target>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

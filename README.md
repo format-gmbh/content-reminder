@@ -31,6 +31,10 @@ content such as prices, seasonal notes or contact persons stays up to date.
 - **Dashboard**: widgets *My reminders*, *All reminders*, *Without
   responsible person*, *Overdue*, *Recently completed*, a counter and a status
   chart – and the dashboard preset *Content maintenance*.
+- **Backend module** *Content → Reminders* with page tree: all reminders of
+  the selected page and its subpages (or of all accessible pages), filtered
+  by person and state, with actions – and the archive of completions,
+  filtered by person and period.
 - **Weekly email**: on a configurable weekday every responsible person gets
   one email per site with their overdue reminders and those due within the
   next days (German or English, depending on the user's backend language).

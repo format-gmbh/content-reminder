@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+	<file source-language="en" target-language="de" datatype="plaintext" original="EXT:content_reminder/Resources/Private/Language/locallang_mod.xlf" product-name="content_reminder">
+		<header/>
+		<body>
+			<trans-unit id="mlang_tabs_tab" approved="yes">
+				<source>Reminders</source>
+				<target>Erinnerungen</target>
+			</trans-unit>
+			<trans-unit id="mlang_labels_tablabel" approved="yes">
+				<source>Reminders of the selected page and its subpages</source>
+				<target>Erinnerungen der gewählten Seite und ihrer Unterseiten</target>
+			</trans-unit>
+			<trans-unit id="mlang_labels_tabdescr" approved="yes">
+				<source>Overview of all reminders and completions with filters by person, state and period.</source>
+				<target>Übersicht aller Erinnerungen und Erledigungen mit Filtern nach Person, Status und Zeitraum.</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -6,6 +6,12 @@ versions follow [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Added
+
+- Backend module "Reminders" below "Web"/"Content" with page tree: reminders of the
+  selected page and subpages with filters (person, state) and actions, and the
+  archive of completions with filters (person, period)
+
 ## [0.2.0] - 2026-10-03
 
 ### Added

@@ -218,6 +218,51 @@ final readonly class ReminderRepository
     }
 
     /**
+     * Reminders on the given pages for the backend module, sorted by due date.
+     *
+     * @param list<int> $pageUids
+     * @param 'open'|'due'|'overdue'|'upcoming'|'paused'|'done'|'all' $state
+     *        open = not done (incl. paused); upcoming = due within the next 30 days
+     * @param int|null $assignee null = any, 0 = unassigned
+     * @return list<Reminder>
+     */
+    public function findForPages(array $pageUids, string $state, ?int $assignee, \DateTimeImmutable $today, int $limit): array
+    {
+        $pageUids = array_values(array_unique(array_filter(array_map(intval(...), $pageUids), static fn(int $uid): bool => $uid > 0)));
+        $reminders = [];
+        foreach (array_chunk($pageUids, 1000) as $chunk) {
+            $queryBuilder = $this->createQueryBuilder(includePaused: true);
+            $todayParameter = $queryBuilder->createNamedParameter($today->format('Y-m-d'));
+            $open = $queryBuilder->expr()->eq('status', $queryBuilder->createNamedParameter(ReminderStatus::Open->value, Connection::PARAM_INT));
+            $notPaused = $queryBuilder->expr()->eq('hidden', $queryBuilder->createNamedParameter(0, Connection::PARAM_INT));
+            $constraints = [$queryBuilder->expr()->in('pid', $queryBuilder->createNamedParameter($chunk, ArrayParameterType::INTEGER))];
+            $constraints = [...$constraints, ...match ($state) {
+                'open' => [$open],
+                'due' => [$open, $notPaused, $this->dueConstraint($queryBuilder, $todayParameter)],
+                'overdue' => [$open, $notPaused, $queryBuilder->expr()->isNotNull('due_date'), $queryBuilder->expr()->lt('due_date', $todayParameter)],
+                'upcoming' => [$open, $notPaused, $this->dueConstraint($queryBuilder, $queryBuilder->createNamedParameter($today->modify('+30 days')->format('Y-m-d')))],
+                'paused' => [$open, $queryBuilder->expr()->eq('hidden', $queryBuilder->createNamedParameter(1, Connection::PARAM_INT))],
+                'done' => [$queryBuilder->expr()->eq('status', $queryBuilder->createNamedParameter(ReminderStatus::Done->value, Connection::PARAM_INT))],
+                default => [],
+            }];
+            if ($assignee !== null) {
+                $constraints[] = $queryBuilder->expr()->eq('assignee', $queryBuilder->createNamedParameter($assignee, Connection::PARAM_INT));
+            }
+            $rows = $queryBuilder
+                ->select('*')
+                ->from(Reminder::TABLE)
+                ->where(...$constraints)
+                ->setMaxResults($limit + 1)
+                ->executeQuery()
+                ->fetchAllAssociative();
+            foreach ($rows as $row) {
+                $reminders[] = Reminder::fromDatabaseRow($row);
+            }
+        }
+        return $this->sortByDueDate($reminders);
+    }
+
+    /**
      * All reminders of a page, including done and paused ones.
      */
     public function countOnPage(int $pageUid): int

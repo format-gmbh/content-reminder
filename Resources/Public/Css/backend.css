@@ -158,3 +158,44 @@
   margin: 0;
   opacity: .8;
 }
+
+/* Backend module */
+.content-reminder-module-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin-bottom: 1rem;
+}
+
+.content-reminder-module-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem 1rem;
+  align-items: flex-end;
+  margin-bottom: 1rem;
+}
+
+.content-reminder-module-filter .form-group {
+  margin-bottom: 0;
+}
+
+.content-reminder-badge--overdue {
+  background: var(--typo3-state-warning-bg, #e8a33d);
+  color: var(--typo3-state-warning-color, #000);
+}
+
+.content-reminder-badge--due {
+  background: var(--typo3-state-info-bg, #2f75b5);
+  color: var(--typo3-state-info-color, #fff);
+}
+
+.content-reminder-badge--notDue {
+  background: var(--typo3-state-success-bg, #3d8a5a);
+  color: var(--typo3-state-success-color, #fff);
+}
+
+.content-reminder-badge--paused,
+.content-reminder-badge--done {
+  background: var(--typo3-state-default-bg, #8c8c8c);
+  color: var(--typo3-state-default-color, #fff);
+}

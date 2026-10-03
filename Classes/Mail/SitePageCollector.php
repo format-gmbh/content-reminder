@@ -30,7 +30,21 @@ class SitePageCollector
      */
     public function collect(int $rootPageUid): array
     {
-        $pages = $this->fetchPages('uid', [$rootPageUid]);
+        return $this->collectSubtrees([$rootPageUid]);
+    }
+
+    /**
+     * Pages of several subtrees. Root 0 stands for the whole page tree.
+     *
+     * @param list<int> $rootPageUids
+     * @return array<int, string> page uid => title, including the root pages
+     */
+    public function collectSubtrees(array $rootPageUids): array
+    {
+        $rootPageUids = array_values(array_unique(array_map(intval(...), $rootPageUids)));
+        $pages = in_array(0, $rootPageUids, true)
+            ? $this->fetchPages('pid', [0])
+            : $this->fetchPages('uid', $rootPageUids);
         $parents = array_keys($pages);
         while ($parents !== []) {
             $children = [];

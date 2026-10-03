@@ -9,6 +9,10 @@ return [
         'provider' => SvgIconProvider::class,
         'source' => 'EXT:content_reminder/Resources/Public/Icons/Extension.svg',
     ],
+    'content-reminder-module' => [
+        'provider' => SvgIconProvider::class,
+        'source' => 'EXT:content_reminder/Resources/Public/Icons/Extension.svg',
+    ],
     'content-reminder-reminder' => [
         'provider' => SvgIconProvider::class,
         'source' => 'EXT:content_reminder/Resources/Public/Icons/Reminder.svg',

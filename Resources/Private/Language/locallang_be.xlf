@@ -306,6 +306,129 @@
 			<trans-unit id="button.newReminder">
 				<source>Create reminder for this page</source>
 			</trans-unit>
+			<trans-unit id="module.title">
+				<source>Reminders</source>
+			</trans-unit>
+			<trans-unit id="module.allPages">
+				<source>All pages</source>
+			</trans-unit>
+			<trans-unit id="module.view.reminders">
+				<source>Reminders</source>
+			</trans-unit>
+			<trans-unit id="module.view.archive">
+				<source>Completions</source>
+			</trans-unit>
+			<trans-unit id="module.filter.depth">
+				<source>Pages</source>
+			</trans-unit>
+			<trans-unit id="module.filter.depth.subpages">
+				<source>This page and subpages</source>
+			</trans-unit>
+			<trans-unit id="module.filter.depth.page">
+				<source>Only this page</source>
+			</trans-unit>
+			<trans-unit id="module.filter.assignee">
+				<source>Responsible</source>
+			</trans-unit>
+			<trans-unit id="module.filter.completedBy">
+				<source>Completed by</source>
+			</trans-unit>
+			<trans-unit id="module.filter.assignee.all">
+				<source>Everybody</source>
+			</trans-unit>
+			<trans-unit id="module.filter.assignee.me">
+				<source>Me</source>
+			</trans-unit>
+			<trans-unit id="module.filter.assignee.unassigned">
+				<source>Not assigned</source>
+			</trans-unit>
+			<trans-unit id="module.filter.state">
+				<source>State</source>
+			</trans-unit>
+			<trans-unit id="module.filter.state.open">
+				<source>Open (incl. paused)</source>
+			</trans-unit>
+			<trans-unit id="module.filter.state.due">
+				<source>Due</source>
+			</trans-unit>
+			<trans-unit id="module.filter.state.overdue">
+				<source>Overdue</source>
+			</trans-unit>
+			<trans-unit id="module.filter.state.upcoming">
+				<source>Due within 30 days</source>
+			</trans-unit>
+			<trans-unit id="module.filter.state.paused">
+				<source>Paused</source>
+			</trans-unit>
+			<trans-unit id="module.filter.state.done">
+				<source>Done</source>
+			</trans-unit>
+			<trans-unit id="module.filter.state.all">
+				<source>All</source>
+			</trans-unit>
+			<trans-unit id="module.filter.period">
+				<source>Period</source>
+			</trans-unit>
+			<trans-unit id="module.filter.period.30">
+				<source>Last 30 days</source>
+			</trans-unit>
+			<trans-unit id="module.filter.period.90">
+				<source>Last 90 days</source>
+			</trans-unit>
+			<trans-unit id="module.filter.period.365">
+				<source>Last 12 months</source>
+			</trans-unit>
+			<trans-unit id="module.filter.period.all">
+				<source>All time</source>
+			</trans-unit>
+			<trans-unit id="module.filter.apply">
+				<source>Apply</source>
+			</trans-unit>
+			<trans-unit id="module.column.title">
+				<source>Reminder</source>
+			</trans-unit>
+			<trans-unit id="module.column.page">
+				<source>Page</source>
+			</trans-unit>
+			<trans-unit id="module.column.dueDate">
+				<source>Due</source>
+			</trans-unit>
+			<trans-unit id="module.column.recurrence">
+				<source>Repeat</source>
+			</trans-unit>
+			<trans-unit id="module.column.assignee">
+				<source>Responsible</source>
+			</trans-unit>
+			<trans-unit id="module.column.state">
+				<source>State</source>
+			</trans-unit>
+			<trans-unit id="module.state.notDue">
+				<source>Not yet due</source>
+			</trans-unit>
+			<trans-unit id="module.state.due">
+				<source>Due</source>
+			</trans-unit>
+			<trans-unit id="module.state.overdue">
+				<source>Overdue</source>
+			</trans-unit>
+			<trans-unit id="module.state.paused">
+				<source>Paused</source>
+			</trans-unit>
+			<trans-unit id="module.state.done">
+				<source>Done</source>
+			</trans-unit>
+			<trans-unit id="module.empty">
+				<source>No reminders match the filter.</source>
+			</trans-unit>
+			<trans-unit id="module.emptyArchive">
+				<source>No completions match the filter.</source>
+			</trans-unit>
+			<trans-unit id="module.limitReached">
+				<source>Only the first %d entries are shown. Narrow down the filter to see more.</source>
+			</trans-unit>
+			<trans-unit id="module.count">
+				<source>Entries: %d</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
