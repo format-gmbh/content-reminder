@@ -1,0 +1,60 @@
+{
+    "name": "formatsoft/content-reminder",
+    "type": "typo3-cms-extension",
+    "description": "Content Reminder - Reminders for TYPO3 pages: due dates, recurrence, assignment and archive to keep content up to date",
+    "license": "GPL-2.0-or-later",
+    "version": "0.1.0-dev",
+    "keywords": [
+        "TYPO3 CMS",
+        "reminder",
+        "content maintenance",
+        "editorial workflow"
+    ],
+    "authors": [
+        {
+            "name": "Andreas Kessel, format Software GmbH",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "typo3/cms-backend": "^13.4 || ^14.0",
+        "typo3/cms-core": "^13.4 || ^14.0",
+        "typo3/cms-dashboard": "^13.4 || ^14.0"
+    },
+    "require-dev": {
+        "typo3/testing-framework": "^9.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Formatsoft\\ContentReminder\\": "Classes/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Formatsoft\\ContentReminder\\Tests\\": "Tests/"
+        }
+    },
+    "config": {
+        "vendor-dir": ".Build/vendor",
+        "bin-dir": ".Build/bin",
+        "allow-plugins": {
+            "typo3/class-alias-loader": true,
+            "typo3/cms-composer-installers": true
+        },
+        "sort-packages": true
+    },
+    "scripts": {
+        "test:unit": "phpunit -c Build/phpunit/UnitTests.xml",
+        "test:functional": "phpunit -c Build/phpunit/FunctionalTests.xml"
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "content_reminder",
+            "web-dir": ".Build/public",
+            "Package": {
+                "providesPackages": {}
+            }
+        }
+    }
+}

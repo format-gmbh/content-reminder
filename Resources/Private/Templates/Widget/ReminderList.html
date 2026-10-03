@@ -1,0 +1,68 @@
+<html
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    xmlns:core="http://typo3.org/ns/TYPO3/CMS/Core/ViewHelpers"
+    data-namespace-typo3-fluid="true"
+>
+<f:variable name="ll" value="LLL:EXT:content_reminder/Resources/Private/Language/locallang_be.xlf:" />
+
+<div class="widget-content-main content-reminder-widget" data-content-reminder-labels="{labels}">
+    <f:if condition="{items}">
+        <f:then>
+            <ul class="content-reminder-list">
+                <f:for each="{items}" as="item">
+                    <li class="content-reminder-item{f:if(condition: item.overdue, then: ' content-reminder-item--overdue')}">
+                        <div class="content-reminder-item__main">
+                            <div class="content-reminder-item__title">{item.reminder.title}</div>
+                            <div class="content-reminder-item__meta">
+                                <a href="{item.layoutUrl}" class="content-reminder-item__page">
+                                    <core:icon identifier="apps-pagetree-page-default" size="small" />
+                                    {item.pageTitle}
+                                </a>
+                                <f:if condition="{item.dueDate}">
+                                    <f:then><span><f:translate key="{ll}panel.dueOn" arguments="{0: item.dueDate}" /></span></f:then>
+                                    <f:else><span><f:translate key="{ll}panel.noDueDate" /></span></f:else>
+                                </f:if>
+                                <f:if condition="{item.overdue}">
+                                    <span class="badge badge-warning"><f:translate key="{ll}panel.overdue" /></span>
+                                </f:if>
+                                <f:if condition="{item.recurrence}">
+                                    <span class="content-reminder-item__recurrence">
+                                        <core:icon identifier="actions-refresh" size="small" />
+                                        {item.recurrence}
+                                    </span>
+                                </f:if>
+                                <f:if condition="{showAssignee}">
+                                    <span class="content-reminder-item__assignee">
+                                        <core:icon identifier="actions-user" size="small" />
+                                        <f:if condition="{item.assigneeName}">
+                                            <f:then>{item.assigneeName}</f:then>
+                                            <f:else><f:translate key="{ll}widget.unassigned" /></f:else>
+                                        </f:if>
+                                    </span>
+                                </f:if>
+                            </div>
+                        </div>
+                        <div class="content-reminder-item__actions">
+                            <f:if condition="{item.canTakeOver}">
+                                <button type="button" class="btn btn-default btn-sm" data-content-reminder-action="takeOver" data-uid="{item.reminder.uid}" title="{f:translate(key: '{ll}panel.action.takeOver')}">
+                                    <core:icon identifier="actions-user" size="small" />
+                                    <span class="visually-hidden"><f:translate key="{ll}panel.action.takeOver" /></span>
+                                </button>
+                            </f:if>
+                            <f:if condition="{item.canComplete}">
+                                <button type="button" class="btn btn-default btn-sm" data-content-reminder-action="complete" data-uid="{item.reminder.uid}" data-title="{item.reminder.title}" data-recurring="{f:if(condition: item.recurrence, then: '1', else: '0')}" title="{f:translate(key: '{ll}panel.action.complete')}">
+                                    <core:icon identifier="actions-check" size="small" />
+                                    <span class="visually-hidden"><f:translate key="{ll}panel.action.complete" /></span>
+                                </button>
+                            </f:if>
+                        </div>
+                    </li>
+                </f:for>
+            </ul>
+        </f:then>
+        <f:else>
+            <p class="content-reminder-widget__empty"><f:translate key="{ll}{emptyLabel}" /></p>
+        </f:else>
+    </f:if>
+</div>
+</html>

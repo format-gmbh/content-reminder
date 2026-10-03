@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+	<file source-language="en" target-language="de" datatype="plaintext" original="EXT:content_reminder/Resources/Private/Language/locallang_be.xlf" product-name="content_reminder">
+		<header/>
+		<body>
+			<trans-unit id="customPermOptions.header" approved="yes">
+				<source>Content Reminder</source>
+				<target>Content Reminder</target>
+			</trans-unit>
+			<trans-unit id="customPermOptions.assignOthers" approved="yes">
+				<source>Assign reminders to other users</source>
+				<target>Erinnerungen anderen Personen zuweisen</target>
+			</trans-unit>
+			<trans-unit id="customPermOptions.assignOthers.description" approved="yes">
+				<source>Allows assigning reminders to other backend users and changing the responsible person.</source>
+				<target>Erlaubt, Erinnerungen anderen Backend-Benutzern zuzuweisen und die Zuständigkeit zu ändern.</target>
+			</trans-unit>
+			<trans-unit id="customPermOptions.manageAll" approved="yes">
+				<source>Manage all reminders</source>
+				<target>Alle Erinnerungen verwalten</target>
+			</trans-unit>
+			<trans-unit id="customPermOptions.manageAll.description" approved="yes">
+				<source>Allows editing, completing and deleting reminders of other users.</source>
+				<target>Erlaubt, Erinnerungen anderer Personen zu bearbeiten, zu erledigen und zu löschen.</target>
+			</trans-unit>
+			<trans-unit id="datahandler.error.createNotAllowed" approved="yes">
+				<source>You are not allowed to create reminders on page "{page}".</source>
+				<target>Sie dürfen auf der Seite „{page}“ keine Erinnerungen anlegen.</target>
+			</trans-unit>
+			<trans-unit id="datahandler.error.assignNotAllowed" approved="yes">
+				<source>You are not allowed to assign reminders to other persons. The reminder "{title}" has been saved without responsible person.</source>
+				<target>Sie dürfen Erinnerungen keinen anderen Personen zuweisen. Die Erinnerung „{title}“ wurde ohne zuständige Person gespeichert.</target>
+			</trans-unit>
+			<trans-unit id="datahandler.error.changeAssigneeNotAllowed" approved="yes">
+				<source>You are not allowed to change the responsible person of the reminder "{title}".</source>
+				<target>Sie dürfen die zuständige Person der Erinnerung „{title}“ nicht ändern.</target>
+			</trans-unit>
+			<trans-unit id="datahandler.error.editNotAllowed" approved="yes">
+				<source>You are not allowed to edit the reminder "{title}".</source>
+				<target>Sie dürfen die Erinnerung „{title}“ nicht bearbeiten.</target>
+			</trans-unit>
+			<trans-unit id="datahandler.error.pauseNotAllowed" approved="yes">
+				<source>You are not allowed to pause or resume the reminder "{title}".</source>
+				<target>Sie dürfen die Erinnerung „{title}“ nicht pausieren oder fortsetzen.</target>
+			</trans-unit>
+			<trans-unit id="datahandler.error.protectedField" approved="yes">
+				<source>The field "{field}" of the reminder "{title}" cannot be changed manually.</source>
+				<target>Das Feld „{field}“ der Erinnerung „{title}“ kann nicht manuell geändert werden.</target>
+			</trans-unit>
+			<trans-unit id="datahandler.error.deleteNotAllowed" approved="yes">
+				<source>You are not allowed to delete the reminder "{title}".</source>
+				<target>Sie dürfen die Erinnerung „{title}“ nicht löschen.</target>
+			</trans-unit>
+			<trans-unit id="datahandler.error.moveNotAllowed" approved="yes">
+				<source>You are not allowed to move the reminder "{title}".</source>
+				<target>Sie dürfen die Erinnerung „{title}“ nicht verschieben.</target>
+			</trans-unit>
+			<trans-unit id="datahandler.warning.assigneeWithoutAccess.title" approved="yes">
+				<source>Responsible person has no access</source>
+				<target>Zuständige Person hat keinen Zugriff</target>
+			</trans-unit>
+			<trans-unit id="datahandler.warning.assigneeWithoutAccess" approved="yes">
+				<source>%1$s cannot edit the page "%2$s" and will not be able to complete the reminder "%3$s".</source>
+				<target>%1$s kann die Seite „%2$s“ nicht bearbeiten und die Erinnerung „%3$s“ daher nicht erledigen.</target>
+			</trans-unit>
+			<trans-unit id="pageTree.dueForUser" approved="yes">
+				<source>%d reminder(s) due for you</source>
+				<target>%d fällige Erinnerung(en) für Sie</target>
+			</trans-unit>
+			<trans-unit id="pageTree.dueUnassigned" approved="yes">
+				<source>%d due without responsible person</source>
+				<target>%d fällig ohne Zuständigkeit</target>
+			</trans-unit>
+			<trans-unit id="recurrence.day.one" approved="yes">
+				<source>daily</source>
+				<target>täglich</target>
+			</trans-unit>
+			<trans-unit id="recurrence.day.other" approved="yes">
+				<source>every %d days</source>
+				<target>alle %d Tage</target>
+			</trans-unit>
+			<trans-unit id="recurrence.week.one" approved="yes">
+				<source>weekly</source>
+				<target>wöchentlich</target>
+			</trans-unit>
+			<trans-unit id="recurrence.week.other" approved="yes">
+				<source>every %d weeks</source>
+				<target>alle %d Wochen</target>
+			</trans-unit>
+			<trans-unit id="recurrence.month.one" approved="yes">
+				<source>monthly</source>
+				<target>monatlich</target>
+			</trans-unit>
+			<trans-unit id="recurrence.month.other" approved="yes">
+				<source>every %d months</source>
+				<target>alle %d Monate</target>
+			</trans-unit>
+			<trans-unit id="recurrence.year.one" approved="yes">
+				<source>yearly</source>
+				<target>jährlich</target>
+			</trans-unit>
+			<trans-unit id="recurrence.year.other" approved="yes">
+				<source>every %d years</source>
+				<target>alle %d Jahre</target>
+			</trans-unit>
+			<trans-unit id="panel.title" approved="yes">
+				<source>Reminders due for you</source>
+				<target>Ihre fälligen Erinnerungen</target>
+			</trans-unit>
+			<trans-unit id="panel.unassigned" approved="yes">
+				<source>Due without responsible person</source>
+				<target>Fällig, ohne Zuständigkeit</target>
+			</trans-unit>
+			<trans-unit id="panel.dueOn" approved="yes">
+				<source>due on %s</source>
+				<target>fällig am %s</target>
+			</trans-unit>
+			<trans-unit id="panel.noDueDate" approved="yes">
+				<source>no due date (due now)</source>
+				<target>ohne Termin (sofort fällig)</target>
+			</trans-unit>
+			<trans-unit id="panel.overdue" approved="yes">
+				<source>overdue</source>
+				<target>überfällig</target>
+			</trans-unit>
+			<trans-unit id="panel.action.takeOver" approved="yes">
+				<source>Take over</source>
+				<target>Übernehmen</target>
+			</trans-unit>
+			<trans-unit id="panel.action.complete" approved="yes">
+				<source>Done</source>
+				<target>Erledigt</target>
+			</trans-unit>
+			<trans-unit id="panel.action.edit" approved="yes">
+				<source>Edit</source>
+				<target>Bearbeiten</target>
+			</trans-unit>
+			<trans-unit id="panel.action.pause" approved="yes">
+				<source>Pause</source>
+				<target>Pausieren</target>
+			</trans-unit>
+			<trans-unit id="panel.otherReminders" approved="yes">
+				<source>%d further reminder(s) on this page</source>
+				<target>%d weitere Erinnerung(en) auf dieser Seite</target>
+			</trans-unit>
+			<trans-unit id="panel.remindersOnPage" approved="yes">
+				<source>%d reminder(s) on this page</source>
+				<target>%d Erinnerung(en) auf dieser Seite</target>
+			</trans-unit>
+			<trans-unit id="panel.history" approved="yes">
+				<source>History</source>
+				<target>Verlauf</target>
+			</trans-unit>
+			<trans-unit id="panel.new" approved="yes">
+				<source>New reminder</source>
+				<target>Neue Erinnerung</target>
+			</trans-unit>
+			<trans-unit id="history.completedAt" approved="yes">
+				<source>Completed at</source>
+				<target>Erledigt am</target>
+			</trans-unit>
+			<trans-unit id="history.reminder" approved="yes">
+				<source>Reminder</source>
+				<target>Erinnerung</target>
+			</trans-unit>
+			<trans-unit id="history.completedBy" approved="yes">
+				<source>Completed by</source>
+				<target>Erledigt von</target>
+			</trans-unit>
+			<trans-unit id="history.dueDate" approved="yes">
+				<source>Was due on</source>
+				<target>War fällig am</target>
+			</trans-unit>
+			<trans-unit id="history.nextDueDate" approved="yes">
+				<source>Next due date</source>
+				<target>Nächste Fälligkeit</target>
+			</trans-unit>
+			<trans-unit id="history.comment" approved="yes">
+				<source>Comment</source>
+				<target>Kommentar</target>
+			</trans-unit>
+			<trans-unit id="history.empty" approved="yes">
+				<source>No reminders have been completed yet.</source>
+				<target>Bisher wurden keine Erinnerungen erledigt.</target>
+			</trans-unit>
+			<trans-unit id="action.error.notFound" approved="yes">
+				<source>The reminder no longer exists.</source>
+				<target>Die Erinnerung existiert nicht mehr.</target>
+			</trans-unit>
+			<trans-unit id="action.error.notAllowed" approved="yes">
+				<source>You are not allowed to perform this action.</source>
+				<target>Sie dürfen diese Aktion nicht ausführen.</target>
+			</trans-unit>
+			<trans-unit id="action.error.unknownAction" approved="yes">
+				<source>Unknown action.</source>
+				<target>Unbekannte Aktion.</target>
+			</trans-unit>
+			<trans-unit id="action.error.failed" approved="yes">
+				<source>The reminder could not be saved.</source>
+				<target>Die Erinnerung konnte nicht gespeichert werden.</target>
+			</trans-unit>
+			<trans-unit id="action.success.complete" approved="yes">
+				<source>"%s" has been marked as done.</source>
+				<target>„%s“ wurde als erledigt markiert.</target>
+			</trans-unit>
+			<trans-unit id="action.success.takeOver" approved="yes">
+				<source>"%s" is now assigned to you.</source>
+				<target>„%s“ ist jetzt Ihnen zugewiesen.</target>
+			</trans-unit>
+			<trans-unit id="action.success.pause" approved="yes">
+				<source>"%s" has been paused.</source>
+				<target>„%s“ wurde pausiert.</target>
+			</trans-unit>
+			<trans-unit id="action.success.resume" approved="yes">
+				<source>"%s" has been resumed.</source>
+				<target>„%s“ wurde fortgesetzt.</target>
+			</trans-unit>
+			<trans-unit id="action.success.reopen" approved="yes">
+				<source>"%s" has been reopened.</source>
+				<target>„%s“ wurde wieder geöffnet.</target>
+			</trans-unit>
+			<trans-unit id="js.complete.title" approved="yes">
+				<source>Mark reminder as done</source>
+				<target>Erinnerung erledigen</target>
+			</trans-unit>
+			<trans-unit id="js.complete.hint" approved="yes">
+				<source>Mark "%s" as done?</source>
+				<target>„%s“ als erledigt markieren?</target>
+			</trans-unit>
+			<trans-unit id="js.complete.hintRecurring" approved="yes">
+				<source>Mark "%s" as done? The next due date will be calculated from today.</source>
+				<target>„%s“ als erledigt markieren? Die nächste Fälligkeit wird ab heute berechnet.</target>
+			</trans-unit>
+			<trans-unit id="js.complete.comment" approved="yes">
+				<source>Comment (optional)</source>
+				<target>Kommentar (optional)</target>
+			</trans-unit>
+			<trans-unit id="js.complete.confirm" approved="yes">
+				<source>Done</source>
+				<target>Erledigt</target>
+			</trans-unit>
+			<trans-unit id="js.cancel" approved="yes">
+				<source>Cancel</source>
+				<target>Abbrechen</target>
+			</trans-unit>
+			<trans-unit id="js.close" approved="yes">
+				<source>Close</source>
+				<target>Schließen</target>
+			</trans-unit>
+			<trans-unit id="js.history.title" approved="yes">
+				<source>Completion history</source>
+				<target>Erledigungs-Verlauf</target>
+			</trans-unit>
+			<trans-unit id="js.notification.success" approved="yes">
+				<source>Saved</source>
+				<target>Gespeichert</target>
+			</trans-unit>
+			<trans-unit id="js.notification.error" approved="yes">
+				<source>Error</source>
+				<target>Fehler</target>
+			</trans-unit>
+			<trans-unit id="js.notification.failed" approved="yes">
+				<source>The action could not be performed.</source>
+				<target>Die Aktion konnte nicht ausgeführt werden.</target>
+			</trans-unit>
+			<trans-unit id="list.filter.label" approved="yes">
+				<source>Reminders</source>
+				<target>Erinnerungen</target>
+			</trans-unit>
+			<trans-unit id="list.filter.mine" approved="yes">
+				<source>Only mine</source>
+				<target>Nur meine</target>
+			</trans-unit>
+			<trans-unit id="list.filter.due" approved="yes">
+				<source>Only due</source>
+				<target>Nur fällige</target>
+			</trans-unit>
+			<trans-unit id="list.action.resume" approved="yes">
+				<source>Resume</source>
+				<target>Fortsetzen</target>
+			</trans-unit>
+			<trans-unit id="list.action.reopen" approved="yes">
+				<source>Reopen</source>
+				<target>Wieder öffnen</target>
+			</trans-unit>
+			<trans-unit id="list.action.history" approved="yes">
+				<source>Completion history</source>
+				<target>Erledigungs-Verlauf</target>
+			</trans-unit>
+			<trans-unit id="list.filter.active" approved="yes">
+				<source>Filter active</source>
+				<target>Filter aktiv</target>
+			</trans-unit>
+			<trans-unit id="widget.group" approved="yes">
+				<source>Content Reminder</source>
+				<target>Erinnerungen</target>
+			</trans-unit>
+			<trans-unit id="widget.preset.title" approved="yes">
+				<source>Content maintenance</source>
+				<target>Content-Pflege</target>
+			</trans-unit>
+			<trans-unit id="widget.preset.description" approved="yes">
+				<source>Your due reminders, unassigned and overdue reminders, and what has been completed recently.</source>
+				<target>Ihre fälligen Erinnerungen, Erinnerungen ohne Zuständigkeit, überfällige und kürzlich erledigte Erinnerungen.</target>
+			</trans-unit>
+			<trans-unit id="widget.contentReminderMine.title" approved="yes">
+				<source>My reminders</source>
+				<target>Meine Erinnerungen</target>
+			</trans-unit>
+			<trans-unit id="widget.contentReminderMine.description" approved="yes">
+				<source>Your open reminders, due and overdue ones first.</source>
+				<target>Ihre offenen Erinnerungen, fällige und überfällige zuerst.</target>
+			</trans-unit>
+			<trans-unit id="widget.contentReminderAll.title" approved="yes">
+				<source>All reminders</source>
+				<target>Alle Erinnerungen</target>
+			</trans-unit>
+			<trans-unit id="widget.contentReminderAll.description" approved="yes">
+				<source>All open reminders with responsible person, sorted by due date.</source>
+				<target>Alle offenen Erinnerungen mit zuständiger Person, nach Fälligkeit sortiert.</target>
+			</trans-unit>
+			<trans-unit id="widget.contentReminderUnassigned.title" approved="yes">
+				<source>Reminders without responsible person</source>
+				<target>Erinnerungen ohne Zuständigkeit</target>
+			</trans-unit>
+			<trans-unit id="widget.contentReminderUnassigned.description" approved="yes">
+				<source>Open reminders nobody is responsible for – take them over.</source>
+				<target>Offene Erinnerungen, für die niemand zuständig ist – zum Übernehmen.</target>
+			</trans-unit>
+			<trans-unit id="widget.contentReminderOverdue.title" approved="yes">
+				<source>Overdue reminders</source>
+				<target>Überfällige Erinnerungen</target>
+			</trans-unit>
+			<trans-unit id="widget.contentReminderOverdue.description" approved="yes">
+				<source>All reminders whose due date has passed.</source>
+				<target>Alle Erinnerungen, deren Fälligkeit überschritten ist.</target>
+			</trans-unit>
+			<trans-unit id="widget.contentReminderRecentlyCompleted.title" approved="yes">
+				<source>Recently completed</source>
+				<target>Kürzlich erledigt</target>
+			</trans-unit>
+			<trans-unit id="widget.contentReminderRecentlyCompleted.description" approved="yes">
+				<source>Who completed which reminder and when.</source>
+				<target>Wer wann welche Erinnerung erledigt hat.</target>
+			</trans-unit>
+			<trans-unit id="widget.contentReminderDueCount.title" approved="yes">
+				<source>Reminders due for you</source>
+				<target>Fällige Erinnerungen für Sie</target>
+			</trans-unit>
+			<trans-unit id="widget.contentReminderDueCount.subtitle" approved="yes">
+				<source>incl. overdue and without due date</source>
+				<target>inkl. überfälliger und ohne Termin</target>
+			</trans-unit>
+			<trans-unit id="widget.contentReminderDueCount.description" approved="yes">
+				<source>Number of reminders that are due for you.</source>
+				<target>Anzahl der Erinnerungen, die für Sie fällig sind.</target>
+			</trans-unit>
+			<trans-unit id="widget.contentReminderStatus.title" approved="yes">
+				<source>Reminder status</source>
+				<target>Status der Erinnerungen</target>
+			</trans-unit>
+			<trans-unit id="widget.contentReminderStatus.description" approved="yes">
+				<source>Open reminders by state: not yet due, due, overdue, paused.</source>
+				<target>Offene Erinnerungen nach Zustand: noch nicht fällig, fällig, überfällig, pausiert.</target>
+			</trans-unit>
+			<trans-unit id="widget.status.notDue" approved="yes">
+				<source>Not yet due</source>
+				<target>Noch nicht fällig</target>
+			</trans-unit>
+			<trans-unit id="widget.status.due" approved="yes">
+				<source>Due</source>
+				<target>Fällig</target>
+			</trans-unit>
+			<trans-unit id="widget.status.overdue" approved="yes">
+				<source>Overdue</source>
+				<target>Überfällig</target>
+			</trans-unit>
+			<trans-unit id="widget.status.paused" approved="yes">
+				<source>Paused</source>
+				<target>Pausiert</target>
+			</trans-unit>
+			<trans-unit id="widget.unassigned" approved="yes">
+				<source>not assigned</source>
+				<target>nicht zugewiesen</target>
+			</trans-unit>
+			<trans-unit id="widget.empty" approved="yes">
+				<source>There are no open reminders.</source>
+				<target>Es gibt keine offenen Erinnerungen.</target>
+			</trans-unit>
+			<trans-unit id="widget.empty.mine" approved="yes">
+				<source>You have no open reminders.</source>
+				<target>Sie haben keine offenen Erinnerungen.</target>
+			</trans-unit>
+			<trans-unit id="widget.empty.unassigned" approved="yes">
+				<source>All reminders have a responsible person.</source>
+				<target>Alle Erinnerungen haben eine zuständige Person.</target>
+			</trans-unit>
+			<trans-unit id="widget.empty.overdue" approved="yes">
+				<source>No reminder is overdue.</source>
+				<target>Keine Erinnerung ist überfällig.</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

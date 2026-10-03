@@ -1,0 +1,125 @@
+<html
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    xmlns:core="http://typo3.org/ns/TYPO3/CMS/Core/ViewHelpers"
+    data-namespace-typo3-fluid="true"
+>
+<f:variable name="ll" value="LLL:EXT:content_reminder/Resources/Private/Language/locallang_be.xlf:" />
+
+<div class="content-reminder-panel" data-content-reminder-panel>
+    <f:if condition="{dueForUser} || {dueUnassigned}">
+        <f:then>
+            <div class="content-reminder-box">
+                <h3 class="content-reminder-box__title">
+                    <core:icon identifier="content-reminder-reminder" size="small" />
+                    <f:translate key="{ll}panel.title" />
+                </h3>
+
+                <f:if condition="{dueForUser}">
+                    <ul class="content-reminder-list">
+                        <f:for each="{dueForUser}" as="item">
+                            <f:render section="Item" arguments="{item: item, ll: ll}" />
+                        </f:for>
+                    </ul>
+                </f:if>
+
+                <f:if condition="{dueUnassigned}">
+                    <h4 class="content-reminder-box__subtitle">
+                        <core:icon identifier="actions-user" size="small" />
+                        <f:translate key="{ll}panel.unassigned" />
+                    </h4>
+                    <ul class="content-reminder-list">
+                        <f:for each="{dueUnassigned}" as="item">
+                            <f:render section="Item" arguments="{item: item, ll: ll}" />
+                        </f:for>
+                    </ul>
+                </f:if>
+
+                <f:render section="Footer" arguments="{_all}" />
+            </div>
+        </f:then>
+        <f:else>
+            <div class="content-reminder-hint">
+                <f:render section="Footer" arguments="{_all}" />
+            </div>
+        </f:else>
+    </f:if>
+</div>
+
+<f:section name="Item">
+    <li class="content-reminder-item{f:if(condition: item.overdue, then: ' content-reminder-item--overdue')}">
+        <div class="content-reminder-item__main">
+            <div class="content-reminder-item__title">{item.reminder.title}</div>
+            <div class="content-reminder-item__meta">
+                <f:if condition="{item.dueDate}">
+                    <f:then><f:translate key="{ll}panel.dueOn" arguments="{0: item.dueDate}" /></f:then>
+                    <f:else><f:translate key="{ll}panel.noDueDate" /></f:else>
+                </f:if>
+                <f:if condition="{item.overdue}">
+                    <span class="badge badge-warning"><f:translate key="{ll}panel.overdue" /></span>
+                </f:if>
+                <f:if condition="{item.recurrence}">
+                    <span class="content-reminder-item__recurrence">
+                        <core:icon identifier="actions-refresh" size="small" />
+                        {item.recurrence}
+                    </span>
+                </f:if>
+            </div>
+            <f:if condition="{item.reminder.notes}">
+                <div class="content-reminder-item__notes">{item.reminder.notes -> f:format.crop(maxCharacters: 300) -> f:format.nl2br()}</div>
+            </f:if>
+        </div>
+        <div class="content-reminder-item__actions">
+            <f:if condition="{item.canTakeOver}">
+                <button type="button" class="btn btn-default btn-sm" data-content-reminder-action="takeOver" data-uid="{item.reminder.uid}">
+                    <core:icon identifier="actions-user" size="small" />
+                    <f:translate key="{ll}panel.action.takeOver" />
+                </button>
+            </f:if>
+            <f:if condition="{item.canComplete}">
+                <button type="button" class="btn btn-default btn-sm" data-content-reminder-action="complete" data-uid="{item.reminder.uid}" data-title="{item.reminder.title}" data-recurring="{f:if(condition: item.recurrence, then: '1', else: '0')}">
+                    <core:icon identifier="actions-check" size="small" />
+                    <f:translate key="{ll}panel.action.complete" />
+                </button>
+            </f:if>
+            <f:if condition="{item.editUrl}">
+                <a class="btn btn-default btn-sm" href="{item.editUrl}">
+                    <core:icon identifier="actions-open" size="small" />
+                    <f:translate key="{ll}panel.action.edit" />
+                </a>
+            </f:if>
+            <f:if condition="{item.canPause}">
+                <button type="button" class="btn btn-default btn-sm" data-content-reminder-action="pause" data-uid="{item.reminder.uid}">
+                    <core:icon identifier="actions-pause" size="small" />
+                    <f:translate key="{ll}panel.action.pause" />
+                </button>
+            </f:if>
+        </div>
+    </li>
+</f:section>
+
+<f:section name="Footer">
+    <div class="content-reminder-footer">
+        <f:if condition="{otherCount}">
+            <a class="content-reminder-footer__link" href="{listUrl}">
+                <core:icon identifier="actions-list" size="small" />
+                <f:if condition="{dueForUser} || {dueUnassigned}">
+                    <f:then><f:translate key="{ll}panel.otherReminders" arguments="{0: otherCount}" /></f:then>
+                    <f:else><f:translate key="{ll}panel.remindersOnPage" arguments="{0: otherCount}" /></f:else>
+                </f:if>
+            </a>
+        </f:if>
+        <f:if condition="{historyCount}">
+            <button type="button" class="btn btn-link content-reminder-footer__link" data-content-reminder-history="{historyUrl}">
+                <core:icon identifier="actions-history" size="small" />
+                <f:translate key="{ll}panel.history" />
+            </button>
+        </f:if>
+        <f:if condition="{newUrl}">
+            <a class="content-reminder-footer__link" href="{newUrl}">
+                <core:icon identifier="actions-plus" size="small" />
+                <f:translate key="{ll}panel.new" />
+            </a>
+        </f:if>
+    </div>
+</f:section>
+</html>

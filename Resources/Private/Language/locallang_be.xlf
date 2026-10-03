@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+	<file source-language="en" datatype="plaintext" original="EXT:content_reminder/Resources/Private/Language/locallang_be.xlf" product-name="content_reminder">
+		<header/>
+		<body>
+			<trans-unit id="customPermOptions.header">
+				<source>Content Reminder</source>
+			</trans-unit>
+			<trans-unit id="customPermOptions.assignOthers">
+				<source>Assign reminders to other users</source>
+			</trans-unit>
+			<trans-unit id="customPermOptions.assignOthers.description">
+				<source>Allows assigning reminders to other backend users and changing the responsible person.</source>
+			</trans-unit>
+			<trans-unit id="customPermOptions.manageAll">
+				<source>Manage all reminders</source>
+			</trans-unit>
+			<trans-unit id="customPermOptions.manageAll.description">
+				<source>Allows editing, completing and deleting reminders of other users.</source>
+			</trans-unit>
+			<trans-unit id="datahandler.error.createNotAllowed">
+				<source>You are not allowed to create reminders on page "{page}".</source>
+			</trans-unit>
+			<trans-unit id="datahandler.error.assignNotAllowed">
+				<source>You are not allowed to assign reminders to other persons. The reminder "{title}" has been saved without responsible person.</source>
+			</trans-unit>
+			<trans-unit id="datahandler.error.changeAssigneeNotAllowed">
+				<source>You are not allowed to change the responsible person of the reminder "{title}".</source>
+			</trans-unit>
+			<trans-unit id="datahandler.error.editNotAllowed">
+				<source>You are not allowed to edit the reminder "{title}".</source>
+			</trans-unit>
+			<trans-unit id="datahandler.error.pauseNotAllowed">
+				<source>You are not allowed to pause or resume the reminder "{title}".</source>
+			</trans-unit>
+			<trans-unit id="datahandler.error.protectedField">
+				<source>The field "{field}" of the reminder "{title}" cannot be changed manually.</source>
+			</trans-unit>
+			<trans-unit id="datahandler.error.deleteNotAllowed">
+				<source>You are not allowed to delete the reminder "{title}".</source>
+			</trans-unit>
+			<trans-unit id="datahandler.error.moveNotAllowed">
+				<source>You are not allowed to move the reminder "{title}".</source>
+			</trans-unit>
+			<trans-unit id="datahandler.warning.assigneeWithoutAccess.title">
+				<source>Responsible person has no access</source>
+			</trans-unit>
+			<trans-unit id="datahandler.warning.assigneeWithoutAccess">
+				<source>%1$s cannot edit the page "%2$s" and will not be able to complete the reminder "%3$s".</source>
+			</trans-unit>
+			<trans-unit id="pageTree.dueForUser">
+				<source>%d reminder(s) due for you</source>
+			</trans-unit>
+			<trans-unit id="pageTree.dueUnassigned">
+				<source>%d due without responsible person</source>
+			</trans-unit>
+			<trans-unit id="recurrence.day.one">
+				<source>daily</source>
+			</trans-unit>
+			<trans-unit id="recurrence.day.other">
+				<source>every %d days</source>
+			</trans-unit>
+			<trans-unit id="recurrence.week.one">
+				<source>weekly</source>
+			</trans-unit>
+			<trans-unit id="recurrence.week.other">
+				<source>every %d weeks</source>
+			</trans-unit>
+			<trans-unit id="recurrence.month.one">
+				<source>monthly</source>
+			</trans-unit>
+			<trans-unit id="recurrence.month.other">
+				<source>every %d months</source>
+			</trans-unit>
+			<trans-unit id="recurrence.year.one">
+				<source>yearly</source>
+			</trans-unit>
+			<trans-unit id="recurrence.year.other">
+				<source>every %d years</source>
+			</trans-unit>
+			<trans-unit id="panel.title">
+				<source>Reminders due for you</source>
+			</trans-unit>
+			<trans-unit id="panel.unassigned">
+				<source>Due without responsible person</source>
+			</trans-unit>
+			<trans-unit id="panel.dueOn">
+				<source>due on %s</source>
+			</trans-unit>
+			<trans-unit id="panel.noDueDate">
+				<source>no due date (due now)</source>
+			</trans-unit>
+			<trans-unit id="panel.overdue">
+				<source>overdue</source>
+			</trans-unit>
+			<trans-unit id="panel.action.takeOver">
+				<source>Take over</source>
+			</trans-unit>
+			<trans-unit id="panel.action.complete">
+				<source>Done</source>
+			</trans-unit>
+			<trans-unit id="panel.action.edit">
+				<source>Edit</source>
+			</trans-unit>
+			<trans-unit id="panel.action.pause">
+				<source>Pause</source>
+			</trans-unit>
+			<trans-unit id="panel.otherReminders">
+				<source>%d further reminder(s) on this page</source>
+			</trans-unit>
+			<trans-unit id="panel.remindersOnPage">
+				<source>%d reminder(s) on this page</source>
+			</trans-unit>
+			<trans-unit id="panel.history">
+				<source>History</source>
+			</trans-unit>
+			<trans-unit id="panel.new">
+				<source>New reminder</source>
+			</trans-unit>
+			<trans-unit id="history.completedAt">
+				<source>Completed at</source>
+			</trans-unit>
+			<trans-unit id="history.reminder">
+				<source>Reminder</source>
+			</trans-unit>
+			<trans-unit id="history.completedBy">
+				<source>Completed by</source>
+			</trans-unit>
+			<trans-unit id="history.dueDate">
+				<source>Was due on</source>
+			</trans-unit>
+			<trans-unit id="history.nextDueDate">
+				<source>Next due date</source>
+			</trans-unit>
+			<trans-unit id="history.comment">
+				<source>Comment</source>
+			</trans-unit>
+			<trans-unit id="history.empty">
+				<source>No reminders have been completed yet.</source>
+			</trans-unit>
+			<trans-unit id="action.error.notFound">
+				<source>The reminder no longer exists.</source>
+			</trans-unit>
+			<trans-unit id="action.error.notAllowed">
+				<source>You are not allowed to perform this action.</source>
+			</trans-unit>
+			<trans-unit id="action.error.unknownAction">
+				<source>Unknown action.</source>
+			</trans-unit>
+			<trans-unit id="action.error.failed">
+				<source>The reminder could not be saved.</source>
+			</trans-unit>
+			<trans-unit id="action.success.complete">
+				<source>"%s" has been marked as done.</source>
+			</trans-unit>
+			<trans-unit id="action.success.takeOver">
+				<source>"%s" is now assigned to you.</source>
+			</trans-unit>
+			<trans-unit id="action.success.pause">
+				<source>"%s" has been paused.</source>
+			</trans-unit>
+			<trans-unit id="action.success.resume">
+				<source>"%s" has been resumed.</source>
+			</trans-unit>
+			<trans-unit id="action.success.reopen">
+				<source>"%s" has been reopened.</source>
+			</trans-unit>
+			<trans-unit id="js.complete.title">
+				<source>Mark reminder as done</source>
+			</trans-unit>
+			<trans-unit id="js.complete.hint">
+				<source>Mark "%s" as done?</source>
+			</trans-unit>
+			<trans-unit id="js.complete.hintRecurring">
+				<source>Mark "%s" as done? The next due date will be calculated from today.</source>
+			</trans-unit>
+			<trans-unit id="js.complete.comment">
+				<source>Comment (optional)</source>
+			</trans-unit>
+			<trans-unit id="js.complete.confirm">
+				<source>Done</source>
+			</trans-unit>
+			<trans-unit id="js.cancel">
+				<source>Cancel</source>
+			</trans-unit>
+			<trans-unit id="js.close">
+				<source>Close</source>
+			</trans-unit>
+			<trans-unit id="js.history.title">
+				<source>Completion history</source>
+			</trans-unit>
+			<trans-unit id="js.notification.success">
+				<source>Saved</source>
+			</trans-unit>
+			<trans-unit id="js.notification.error">
+				<source>Error</source>
+			</trans-unit>
+			<trans-unit id="js.notification.failed">
+				<source>The action could not be performed.</source>
+			</trans-unit>
+			<trans-unit id="list.filter.label">
+				<source>Reminders</source>
+			</trans-unit>
+			<trans-unit id="list.filter.mine">
+				<source>Only mine</source>
+			</trans-unit>
+			<trans-unit id="list.filter.due">
+				<source>Only due</source>
+			</trans-unit>
+			<trans-unit id="list.action.resume">
+				<source>Resume</source>
+			</trans-unit>
+			<trans-unit id="list.action.reopen">
+				<source>Reopen</source>
+			</trans-unit>
+			<trans-unit id="list.action.history">
+				<source>Completion history</source>
+			</trans-unit>
+			<trans-unit id="list.filter.active">
+				<source>Filter active</source>
+			</trans-unit>
+			<trans-unit id="widget.group">
+				<source>Content Reminder</source>
+			</trans-unit>
+			<trans-unit id="widget.preset.title">
+				<source>Content maintenance</source>
+			</trans-unit>
+			<trans-unit id="widget.preset.description">
+				<source>Your due reminders, unassigned and overdue reminders, and what has been completed recently.</source>
+			</trans-unit>
+			<trans-unit id="widget.contentReminderMine.title">
+				<source>My reminders</source>
+			</trans-unit>
+			<trans-unit id="widget.contentReminderMine.description">
+				<source>Your open reminders, due and overdue ones first.</source>
+			</trans-unit>
+			<trans-unit id="widget.contentReminderAll.title">
+				<source>All reminders</source>
+			</trans-unit>
+			<trans-unit id="widget.contentReminderAll.description">
+				<source>All open reminders with responsible person, sorted by due date.</source>
+			</trans-unit>
+			<trans-unit id="widget.contentReminderUnassigned.title">
+				<source>Reminders without responsible person</source>
+			</trans-unit>
+			<trans-unit id="widget.contentReminderUnassigned.description">
+				<source>Open reminders nobody is responsible for – take them over.</source>
+			</trans-unit>
+			<trans-unit id="widget.contentReminderOverdue.title">
+				<source>Overdue reminders</source>
+			</trans-unit>
+			<trans-unit id="widget.contentReminderOverdue.description">
+				<source>All reminders whose due date has passed.</source>
+			</trans-unit>
+			<trans-unit id="widget.contentReminderRecentlyCompleted.title">
+				<source>Recently completed</source>
+			</trans-unit>
+			<trans-unit id="widget.contentReminderRecentlyCompleted.description">
+				<source>Who completed which reminder and when.</source>
+			</trans-unit>
+			<trans-unit id="widget.contentReminderDueCount.title">
+				<source>Reminders due for you</source>
+			</trans-unit>
+			<trans-unit id="widget.contentReminderDueCount.subtitle">
+				<source>incl. overdue and without due date</source>
+			</trans-unit>
+			<trans-unit id="widget.contentReminderDueCount.description">
+				<source>Number of reminders that are due for you.</source>
+			</trans-unit>
+			<trans-unit id="widget.contentReminderStatus.title">
+				<source>Reminder status</source>
+			</trans-unit>
+			<trans-unit id="widget.contentReminderStatus.description">
+				<source>Open reminders by state: not yet due, due, overdue, paused.</source>
+			</trans-unit>
+			<trans-unit id="widget.status.notDue">
+				<source>Not yet due</source>
+			</trans-unit>
+			<trans-unit id="widget.status.due">
+				<source>Due</source>
+			</trans-unit>
+			<trans-unit id="widget.status.overdue">
+				<source>Overdue</source>
+			</trans-unit>
+			<trans-unit id="widget.status.paused">
+				<source>Paused</source>
+			</trans-unit>
+			<trans-unit id="widget.unassigned">
+				<source>not assigned</source>
+			</trans-unit>
+			<trans-unit id="widget.empty">
+				<source>There are no open reminders.</source>
+			</trans-unit>
+			<trans-unit id="widget.empty.mine">
+				<source>You have no open reminders.</source>
+			</trans-unit>
+			<trans-unit id="widget.empty.unassigned">
+				<source>All reminders have a responsible person.</source>
+			</trans-unit>
+			<trans-unit id="widget.empty.overdue">
+				<source>No reminder is overdue.</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

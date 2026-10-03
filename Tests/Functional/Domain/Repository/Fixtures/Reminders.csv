@@ -1,0 +1,15 @@
+"tx_contentreminder_reminder",,,,,,,,,
+,"uid","pid","title","due_date","assignee","creator","status","hidden","deleted"
+,1,10,"Mine, no date",\NULL,5,5,0,0,0
+,2,10,"Mine, overdue","2026-10-01",5,5,0,0,0
+,3,10,"Mine, due today","2026-10-03",5,5,0,0,0
+,4,10,"Mine, due tomorrow","2026-10-04",5,5,0,0,0
+,5,10,"Mine, done","2026-10-01",5,5,1,0,0
+,6,10,"Mine, paused","2026-10-01",5,5,0,1,0
+,7,10,"Mine, deleted","2026-10-01",5,5,0,0,1
+,8,10,"Colleague, overdue","2026-10-01",6,6,0,0,0
+,9,10,"Unassigned, overdue","2026-10-01",0,6,0,0,0
+,10,20,"Mine on other page, today","2026-10-03",5,5,0,0,0
+,11,20,"Unassigned, future","2026-12-24",0,6,0,0,0
+,12,30,"Colleague on page 30","2026-10-01",6,6,0,0,0
+,13,40,"Unassigned, no date",\NULL,0,6,0,0,0

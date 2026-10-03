@@ -1,0 +1,43 @@
+<html
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    xmlns:core="http://typo3.org/ns/TYPO3/CMS/Core/ViewHelpers"
+    data-namespace-typo3-fluid="true"
+>
+<f:variable name="ll" value="LLL:EXT:content_reminder/Resources/Private/Language/locallang_be.xlf:" />
+
+<div class="widget-content-main content-reminder-widget">
+    <f:if condition="{entries}">
+        <f:then>
+            <ul class="content-reminder-list">
+                <f:for each="{entries}" as="entry">
+                    <li class="content-reminder-item">
+                        <div class="content-reminder-item__main">
+                            <div class="content-reminder-item__title">
+                                <core:icon identifier="actions-check" size="small" />
+                                {entry.reminder_title}
+                            </div>
+                            <div class="content-reminder-item__meta">
+                                <a href="{entry.layoutUrl}" class="content-reminder-item__page">
+                                    <core:icon identifier="apps-pagetree-page-default" size="small" />
+                                    {entry.page_title}
+                                </a>
+                                <span><f:format.date date="@{entry.completed_at}" format="{dateTimeFormat}" /></span>
+                                <span class="content-reminder-item__assignee">
+                                    <core:icon identifier="actions-user" size="small" />
+                                    {entry.completed_by_name}
+                                </span>
+                            </div>
+                            <f:if condition="{entry.comment}">
+                                <div class="content-reminder-item__notes">{entry.comment -> f:format.crop(maxCharacters: 200)}</div>
+                            </f:if>
+                        </div>
+                    </li>
+                </f:for>
+            </ul>
+        </f:then>
+        <f:else>
+            <p class="content-reminder-widget__empty"><f:translate key="{ll}history.empty" /></p>
+        </f:else>
+    </f:if>
+</div>
+</html>

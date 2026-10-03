@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+	<file source-language="en" datatype="plaintext" original="EXT:content_reminder/Resources/Private/Language/locallang_db.xlf" product-name="content_reminder">
+		<header/>
+		<body>
+			<trans-unit id="tx_contentreminder_reminder">
+				<source>Reminder</source>
+			</trans-unit>
+			<trans-unit id="tx_contentreminder_reminder.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_contentreminder_reminder.notes">
+				<source>Notes</source>
+			</trans-unit>
+			<trans-unit id="tx_contentreminder_reminder.due_date">
+				<source>Due date</source>
+			</trans-unit>
+			<trans-unit id="tx_contentreminder_reminder.due_date.description">
+				<source>Leave empty to make the reminder due immediately.</source>
+			</trans-unit>
+			<trans-unit id="tx_contentreminder_reminder.recurrence_unit">
+				<source>Repeat</source>
+			</trans-unit>
+			<trans-unit id="tx_contentreminder_reminder.recurrence_unit.none">
+				<source>No repetition</source>
+			</trans-unit>
+			<trans-unit id="tx_contentreminder_reminder.recurrence_unit.day">
+				<source>Days</source>
+			</trans-unit>
+			<trans-unit id="tx_contentreminder_reminder.recurrence_unit.week">
+				<source>Weeks</source>
+			</trans-unit>
+			<trans-unit id="tx_contentreminder_reminder.recurrence_unit.month">
+				<source>Months</source>
+			</trans-unit>
+			<trans-unit id="tx_contentreminder_reminder.recurrence_unit.year">
+				<source>Years</source>
+			</trans-unit>
+			<trans-unit id="tx_contentreminder_reminder.recurrence_value">
+				<source>Every … (interval, counted from completion)</source>
+			</trans-unit>
+			<trans-unit id="tx_contentreminder_reminder.assignee">
+				<source>Responsible</source>
+			</trans-unit>
+			<trans-unit id="tx_contentreminder_reminder.assignee.unassigned">
+				<source>– not assigned –</source>
+			</trans-unit>
+			<trans-unit id="tx_contentreminder_reminder.creator">
+				<source>Created by</source>
+			</trans-unit>
+			<trans-unit id="tx_contentreminder_reminder.status">
+				<source>Status</source>
+			</trans-unit>
+			<trans-unit id="tx_contentreminder_reminder.status.open">
+				<source>Open</source>
+			</trans-unit>
+			<trans-unit id="tx_contentreminder_reminder.status.done">
+				<source>Done</source>
+			</trans-unit>
+			<trans-unit id="tx_contentreminder_reminder.hidden">
+				<source>Paused</source>
+			</trans-unit>
+			<trans-unit id="tx_contentreminder_reminder.palette.task">
+				<source>Task</source>
+			</trans-unit>
+			<trans-unit id="tx_contentreminder_reminder.palette.schedule">
+				<source>Schedule</source>
+			</trans-unit>
+			<trans-unit id="tx_contentreminder_reminder.palette.responsibility">
+				<source>Responsibility</source>
+			</trans-unit>
+			<trans-unit id="tx_contentreminder_reminder_log">
+				<source>Reminder archive</source>
+			</trans-unit>
+			<trans-unit id="tx_contentreminder_reminder_log.reminder">
+				<source>Reminder (uid)</source>
+			</trans-unit>
+			<trans-unit id="tx_contentreminder_reminder_log.reminder_title">
+				<source>Reminder</source>
+			</trans-unit>
+			<trans-unit id="tx_contentreminder_reminder_log.page">
+				<source>Page (uid)</source>
+			</trans-unit>
+			<trans-unit id="tx_contentreminder_reminder_log.page_title">
+				<source>Page</source>
+			</trans-unit>
+			<trans-unit id="tx_contentreminder_reminder_log.completed_by">
+				<source>Completed by (uid)</source>
+			</trans-unit>
+			<trans-unit id="tx_contentreminder_reminder_log.completed_by_name">
+				<source>Completed by</source>
+			</trans-unit>
+			<trans-unit id="tx_contentreminder_reminder_log.completed_at">
+				<source>Completed at</source>
+			</trans-unit>
+			<trans-unit id="tx_contentreminder_reminder_log.due_date">
+				<source>Was due on</source>
+			</trans-unit>
+			<trans-unit id="tx_contentreminder_reminder_log.next_due_date">
+				<source>Next due date</source>
+			</trans-unit>
+			<trans-unit id="tx_contentreminder_reminder_log.comment">
+				<source>Comment</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

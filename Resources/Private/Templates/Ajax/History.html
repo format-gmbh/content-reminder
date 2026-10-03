@@ -1,0 +1,54 @@
+<html
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    data-namespace-typo3-fluid="true"
+>
+<f:variable name="ll" value="LLL:EXT:content_reminder/Resources/Private/Language/locallang_be.xlf:" />
+
+<f:if condition="{entries}">
+    <f:then>
+        <div class="table-fit">
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th><f:translate key="{ll}history.completedAt" /></th>
+                        <f:if condition="!{singleReminder}">
+                            <th><f:translate key="{ll}history.reminder" /></th>
+                        </f:if>
+                        <th><f:translate key="{ll}history.completedBy" /></th>
+                        <th><f:translate key="{ll}history.dueDate" /></th>
+                        <th><f:translate key="{ll}history.nextDueDate" /></th>
+                        <th><f:translate key="{ll}history.comment" /></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <f:for each="{entries}" as="entry">
+                        <tr>
+                            <td class="text-nowrap"><f:format.date date="@{entry.completed_at}" format="{dateTimeFormat}" /></td>
+                            <f:if condition="!{singleReminder}">
+                                <td>{entry.reminder_title}</td>
+                            </f:if>
+                            <td>{entry.completed_by_name}</td>
+                            <td class="text-nowrap">
+                                <f:if condition="{entry.due_date}">
+                                    <f:then><f:format.date date="{entry.due_date}" format="{dateFormat}" /></f:then>
+                                    <f:else>–</f:else>
+                                </f:if>
+                            </td>
+                            <td class="text-nowrap">
+                                <f:if condition="{entry.next_due_date}">
+                                    <f:then><f:format.date date="{entry.next_due_date}" format="{dateFormat}" /></f:then>
+                                    <f:else>–</f:else>
+                                </f:if>
+                            </td>
+                            <td>{entry.comment -> f:format.nl2br()}</td>
+                        </tr>
+                    </f:for>
+                </tbody>
+            </table>
+        </div>
+    </f:then>
+    <f:else>
+        <p><f:translate key="{ll}history.empty" /></p>
+    </f:else>
+</f:if>
+</html>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+	<file source-language="en" datatype="plaintext" original="EXT:content_reminder/Configuration/Sets/ContentReminder/labels.xlf" product-name="content_reminder">
+		<header/>
+		<body>
+			<trans-unit id="label">
+				<source>Content Reminder</source>
+			</trans-unit>
+			<trans-unit id="categories.contentReminder">
+				<source>Content Reminder</source>
+			</trans-unit>
+			<trans-unit id="settings.contentReminder.assignableGroups">
+				<source>Assignable backend user groups</source>
+			</trans-unit>
+			<trans-unit id="settings.description.contentReminder.assignableGroups">
+				<source>Comma-separated list of be_groups uids. Only members of these groups can be assigned. Empty = all active backend users.</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

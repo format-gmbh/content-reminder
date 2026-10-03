@@ -1,0 +1,8 @@
+categories:
+  contentReminder: ~
+
+settings:
+  contentReminder.assignableGroups:
+    default: ''
+    type: string
+    category: contentReminder

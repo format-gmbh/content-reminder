@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+	<file source-language="en" target-language="de" datatype="plaintext" original="EXT:content_reminder/Resources/Private/Language/locallang_db.xlf" product-name="content_reminder">
+		<header/>
+		<body>
+			<trans-unit id="tx_contentreminder_reminder" approved="yes">
+				<source>Reminder</source>
+				<target>Erinnerung</target>
+			</trans-unit>
+			<trans-unit id="tx_contentreminder_reminder.title" approved="yes">
+				<source>Title</source>
+				<target>Titel</target>
+			</trans-unit>
+			<trans-unit id="tx_contentreminder_reminder.notes" approved="yes">
+				<source>Notes</source>
+				<target>Notiz</target>
+			</trans-unit>
+			<trans-unit id="tx_contentreminder_reminder.due_date" approved="yes">
+				<source>Due date</source>
+				<target>Fällig am</target>
+			</trans-unit>
+			<trans-unit id="tx_contentreminder_reminder.due_date.description" approved="yes">
+				<source>Leave empty to make the reminder due immediately.</source>
+				<target>Leer lassen, wenn die Erinnerung sofort fällig sein soll.</target>
+			</trans-unit>
+			<trans-unit id="tx_contentreminder_reminder.recurrence_unit" approved="yes">
+				<source>Repeat</source>
+				<target>Wiederholung</target>
+			</trans-unit>
+			<trans-unit id="tx_contentreminder_reminder.recurrence_unit.none" approved="yes">
+				<source>No repetition</source>
+				<target>Keine Wiederholung</target>
+			</trans-unit>
+			<trans-unit id="tx_contentreminder_reminder.recurrence_unit.day" approved="yes">
+				<source>Days</source>
+				<target>Tage</target>
+			</trans-unit>
+			<trans-unit id="tx_contentreminder_reminder.recurrence_unit.week" approved="yes">
+				<source>Weeks</source>
+				<target>Wochen</target>
+			</trans-unit>
+			<trans-unit id="tx_contentreminder_reminder.recurrence_unit.month" approved="yes">
+				<source>Months</source>
+				<target>Monate</target>
+			</trans-unit>
+			<trans-unit id="tx_contentreminder_reminder.recurrence_unit.year" approved="yes">
+				<source>Years</source>
+				<target>Jahre</target>
+			</trans-unit>
+			<trans-unit id="tx_contentreminder_reminder.recurrence_value" approved="yes">
+				<source>Every … (interval, counted from completion)</source>
+				<target>Alle … (Intervall, gerechnet ab Erledigung)</target>
+			</trans-unit>
+			<trans-unit id="tx_contentreminder_reminder.assignee" approved="yes">
+				<source>Responsible</source>
+				<target>Zuständig</target>
+			</trans-unit>
+			<trans-unit id="tx_contentreminder_reminder.assignee.unassigned" approved="yes">
+				<source>– not assigned –</source>
+				<target>– nicht zugewiesen –</target>
+			</trans-unit>
+			<trans-unit id="tx_contentreminder_reminder.creator" approved="yes">
+				<source>Created by</source>
+				<target>Erstellt von</target>
+			</trans-unit>
+			<trans-unit id="tx_contentreminder_reminder.status" approved="yes">
+				<source>Status</source>
+				<target>Status</target>
+			</trans-unit>
+			<trans-unit id="tx_contentreminder_reminder.status.open" approved="yes">
+				<source>Open</source>
+				<target>Offen</target>
+			</trans-unit>
+			<trans-unit id="tx_contentreminder_reminder.status.done" approved="yes">
+				<source>Done</source>
+				<target>Erledigt</target>
+			</trans-unit>
+			<trans-unit id="tx_contentreminder_reminder.hidden" approved="yes">
+				<source>Paused</source>
+				<target>Pausiert</target>
+			</trans-unit>
+			<trans-unit id="tx_contentreminder_reminder.palette.task" approved="yes">
+				<source>Task</source>
+				<target>Aufgabe</target>
+			</trans-unit>
+			<trans-unit id="tx_contentreminder_reminder.palette.schedule" approved="yes">
+				<source>Schedule</source>
+				<target>Termin</target>
+			</trans-unit>
+			<trans-unit id="tx_contentreminder_reminder.palette.responsibility" approved="yes">
+				<source>Responsibility</source>
+				<target>Zuständigkeit</target>
+			</trans-unit>
+			<trans-unit id="tx_contentreminder_reminder_log" approved="yes">
+				<source>Reminder archive</source>
+				<target>Erinnerungs-Archiv</target>
+			</trans-unit>
+			<trans-unit id="tx_contentreminder_reminder_log.reminder" approved="yes">
+				<source>Reminder (uid)</source>
+				<target>Erinnerung (uid)</target>
+			</trans-unit>
+			<trans-unit id="tx_contentreminder_reminder_log.reminder_title" approved="yes">
+				<source>Reminder</source>
+				<target>Erinnerung</target>
+			</trans-unit>
+			<trans-unit id="tx_contentreminder_reminder_log.page" approved="yes">
+				<source>Page (uid)</source>
+				<target>Seite (uid)</target>
+			</trans-unit>
+			<trans-unit id="tx_contentreminder_reminder_log.page_title" approved="yes">
+				<source>Page</source>
+				<target>Seite</target>
+			</trans-unit>
+			<trans-unit id="tx_contentreminder_reminder_log.completed_by" approved="yes">
+				<source>Completed by (uid)</source>
+				<target>Erledigt von (uid)</target>
+			</trans-unit>
+			<trans-unit id="tx_contentreminder_reminder_log.completed_by_name" approved="yes">
+				<source>Completed by</source>
+				<target>Erledigt von</target>
+			</trans-unit>
+			<trans-unit id="tx_contentreminder_reminder_log.completed_at" approved="yes">
+				<source>Completed at</source>
+				<target>Erledigt am</target>
+			</trans-unit>
+			<trans-unit id="tx_contentreminder_reminder_log.due_date" approved="yes">
+				<source>Was due on</source>
+				<target>War fällig am</target>
+			</trans-unit>
+			<trans-unit id="tx_contentreminder_reminder_log.next_due_date" approved="yes">
+				<source>Next due date</source>
+				<target>Nächste Fälligkeit</target>
+			</trans-unit>
+			<trans-unit id="tx_contentreminder_reminder_log.comment" approved="yes">
+				<source>Comment</source>
+				<target>Kommentar</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
