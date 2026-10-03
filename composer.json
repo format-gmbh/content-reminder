@@ -3,13 +3,18 @@
     "type": "typo3-cms-extension",
     "description": "Content Reminder - Reminders for TYPO3 pages: due dates, recurrence, assignment and archive to keep content up to date",
     "license": "GPL-2.0-or-later",
-    "version": "0.1.0-dev",
+    "version": "0.1.0",
     "keywords": [
         "TYPO3 CMS",
         "reminder",
         "content maintenance",
         "editorial workflow"
     ],
+    "homepage": "https://github.com/format-gmbh/content-reminder",
+    "support": {
+        "issues": "https://github.com/format-gmbh/content-reminder/issues",
+        "source": "https://github.com/format-gmbh/content-reminder"
+    },
     "authors": [
         {
             "name": "Andreas Kessel, format Software GmbH",
