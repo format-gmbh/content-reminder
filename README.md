@@ -12,6 +12,23 @@ content such as prices, seasonal notes or contact persons stays up to date.
 | PHP | 8.2 – 8.5 |
 | License | GPL-2.0-or-later |
 
+## Screenshots
+
+**Page module** – reminders due for you above the content elements; the page
+tree marks pages with due reminders (pencil: due for you, person: due without
+responsible person):
+
+![Page module with reminder panel and page tree markers](Documentation/Images/page-module.png)
+
+**Backend module** *Content → Reminders* – all reminders of a page and its
+subpages, with filters and actions:
+
+![Backend module Reminders](Documentation/Images/backend-module.png)
+
+**Dashboard** – preset *Content maintenance* with the reminder widgets:
+
+![Dashboard with reminder widgets](Documentation/Images/dashboard.png)
+
 ## Features
 
 - **Reminders on pages** with title, notes, optional due date (empty = due
