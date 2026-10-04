@@ -6,6 +6,11 @@ versions follow [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Changed
+
+- Page module panel: heading "Due without responsible person" in the same size as the
+  panel title
+
 ## [0.4.0] - 2026-10-04
 
 ### Added
