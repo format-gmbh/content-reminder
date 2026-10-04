@@ -6,6 +6,8 @@ versions follow [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.4.1] - 2026-10-04
+
 ### Changed
 
 - Page tree is updated after reminders were saved or deleted in the editing form
@@ -67,7 +69,8 @@ First public release for TYPO3 13.4 LTS and 14.x.
 - Dashboard widgets and the dashboard preset "Content maintenance"
 - Site set "Content Reminder" with the setting `contentReminder.assignableGroups`
 
-[Unreleased]: https://github.com/format-gmbh/content-reminder/compare/0.4.0...main
+[Unreleased]: https://github.com/format-gmbh/content-reminder/compare/0.4.1...main
+[0.4.1]: https://github.com/format-gmbh/content-reminder/compare/0.4.0...0.4.1
 [0.4.0]: https://github.com/format-gmbh/content-reminder/compare/0.3.0...0.4.0
 [0.3.0]: https://github.com/format-gmbh/content-reminder/compare/0.2.0...0.3.0
 [0.2.0]: https://github.com/format-gmbh/content-reminder/compare/0.1.0...0.2.0
