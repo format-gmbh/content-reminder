@@ -29,6 +29,9 @@ final readonly class StatusChartProvider implements ChartDataProviderInterface
         private ReminderOverviewProvider $provider,
     ) {}
 
+    /**
+     * @return array<string, mixed>
+     */
     public function getChartData(): array
     {
         $counts = $this->provider->countByState();

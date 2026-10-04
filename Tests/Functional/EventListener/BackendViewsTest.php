@@ -145,7 +145,7 @@ final class BackendViewsTest extends FunctionalTestCase
             ? new AfterPageTreeItemsPreparedEvent($request, null, $items)
             : new AfterPageTreeItemsPreparedEvent($request, $items);
         $this->get(PageTreeMarker::class)($event);
-        return $event->getItems();
+        return array_values($event->getItems());
     }
 
     private function renderPanel(int $pageUid): string

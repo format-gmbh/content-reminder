@@ -52,6 +52,10 @@ jobs:
           --with "typo3/cms-backend:${{ matrix.typo3 }}"
           --with "typo3/cms-dashboard:${{ matrix.typo3 }}"
           --with "typo3/cms-scheduler:${{ matrix.typo3 }}"
+          --with "typo3/cms-setup:${{ matrix.typo3 }}"
+
+      - name: PHPStan
+        run: composer phpstan -- --no-progress
 
       - name: Unit tests
         run: composer test:unit

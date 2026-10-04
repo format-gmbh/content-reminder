@@ -173,7 +173,8 @@ final readonly class ReminderModuleController
             'unassigned' => 0,
             default => (int)$filters['assignee'],
         };
-        $reminders = $this->reminderRepository->findForPages(array_keys($pages), $filters['state'], $assignee, $today, self::LIMIT);
+        $state = in_array($filters['state'], self::FILTERS['state'], true) ? $filters['state'] : 'open';
+        $reminders = $this->reminderRepository->findForPages(array_keys($pages), $state, $assignee, $today, self::LIMIT);
         $returnUrl = (string)($request->getAttribute('normalizedParams')?->getRequestUri() ?? '');
         $userNames = $this->getUserNames();
         $pageRecords = [];
@@ -319,7 +320,7 @@ final readonly class ReminderModuleController
      * Path and query parameters of the module URL for the GET filter form
      * (browsers drop the query string of the form action).
      *
-     * @return array{path: string, parameters: array<string, string>}
+     * @return array{path: string, parameters: array<int|string, string>}
      */
     private function getModuleUrlParts(int $pageUid): array
     {

@@ -57,11 +57,17 @@ final class RecentlyCompletedWidget implements WidgetInterface, RequestAwareWidg
         return $view->render('Widget/RecentlyCompleted');
     }
 
+    /**
+     * @return array<string, mixed>
+     */
     public function getOptions(): array
     {
         return $this->options;
     }
 
+    /**
+     * @return list<string>
+     */
     public function getCssFiles(): array
     {
         return ['EXT:content_reminder/Resources/Public/Css/backend.css'];

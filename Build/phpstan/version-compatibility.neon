@@ -1,0 +1,51 @@
+# Code that supports TYPO3 v13 and v14 with different core APIs. PHPStan only knows the
+# installed TYPO3 version and reports the branch for the other version. The analysis
+# runs against both versions, so each entry only matches in one of them.
+parameters:
+  ignoreErrors:
+    # method_exists() for APIs added in TYPO3 v14
+    -
+      identifiers:
+        - function.alreadyNarrowedType
+        - function.impossibleType
+      paths:
+        - ../../Classes/EventListener/PageLayoutNewReminderButton.php
+        - ../../Classes/EventListener/RegisterLegacyUserSetting.php
+        - ../../Configuration/TCA/Overrides/be_users.php
+      reportUnmatched: false
+
+    # ModifyRecordListRecordActionsEvent: record array and HTML strings (v13),
+    # RecordInterface and button components (v14)
+    -
+      identifiers:
+        - argument.type
+        - booleanNot.alwaysFalse
+        - booleanNot.alwaysTrue
+        - class.notFound
+        - classConstant.notFound
+        - deadCode.unreachable
+        - instanceof.alwaysFalse
+        - instanceof.alwaysTrue
+        - method.notFound
+        - method.unused
+        - offsetAccess.nonOffsetAccessible
+        - ternary.alwaysFalse
+        - ternary.alwaysTrue
+      paths:
+        - ../../Classes/EventListener/RecordListRecordActions.php
+        - ../../Tests/Functional/EventListener/RecordListRecordActionsTest.php
+      reportUnmatched: false
+
+    # Event constructors with different signatures in v13 and v14
+    -
+      identifiers:
+        - argument.type
+        - arguments.count
+        - class.notFound
+        - nullCoalesce.expr
+        - parameter.notFound
+        - return.type
+      paths:
+        - ../../Tests/Functional/EventListener/BackendViewsTest.php
+        - ../../Tests/Functional/EventListener/RecordListRecordActionsTest.php
+      reportUnmatched: false

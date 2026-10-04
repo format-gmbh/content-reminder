@@ -92,7 +92,7 @@ final readonly class ReminderAjaxController
         if ($reminderUid > 0) {
             // A deleted reminder still has its history; access is checked on its page
             $entries = $this->logRepository->findByReminder($reminderUid);
-            $pageUid = (int)($entries[0]['page'] ?? $this->reminderRepository->findByUid($reminderUid)?->pageUid ?? 0);
+            $pageUid = (int)($entries[0]['page'] ?? $this->reminderRepository->findByUid($reminderUid)->pageUid ?? 0);
         } else {
             $entries = $this->logRepository->findByPage($pageUid);
         }

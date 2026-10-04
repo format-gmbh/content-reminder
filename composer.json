@@ -31,7 +31,9 @@
         "typo3/cms-scheduler": "Runs the command content-reminder:send-weekly-mail daily for the weekly email; task \"Table garbage collection\" cleans up old archive entries"
     },
     "require-dev": {
+        "phpstan/phpstan": "^2.1",
         "typo3/cms-scheduler": "^13.4 || ^14.0",
+        "typo3/cms-setup": "^13.4 || ^14.0",
         "typo3/testing-framework": "^9.3"
     },
     "autoload": {
@@ -54,6 +56,7 @@
         "sort-packages": true
     },
     "scripts": {
+        "phpstan": "phpstan analyse -c Build/phpstan/phpstan.neon --memory-limit=1G",
         "test:unit": "phpunit -c Build/phpunit/UnitTests.xml",
         "test:functional": "phpunit -c Build/phpunit/FunctionalTests.xml"
     },

@@ -52,7 +52,8 @@ final readonly class PageLayoutNewReminderButton
         }
         $module = $request->getAttribute('module');
         $normalizedParams = $request->getAttribute('normalizedParams');
-        $pageUid = (int)($request->getParsedBody()['id'] ?? $request->getQueryParams()['id'] ?? 0);
+        $parsedBody = $request->getParsedBody();
+        $pageUid = (int)((is_array($parsedBody) ? $parsedBody['id'] ?? null : null) ?? $request->getQueryParams()['id'] ?? 0);
         if ($pageUid <= 0 || $module?->getIdentifier() !== self::MODULE || $normalizedParams === null) {
             return;
         }

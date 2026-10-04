@@ -59,8 +59,16 @@ final class ReminderListWidget implements WidgetInterface, RequestAwareWidgetInt
         $view->assignMultiple([
             'configuration' => $this->configuration,
             'items' => $this->provider->getItems(
-                (string)($this->options['scope'] ?? 'open'),
-                (string)($this->options['assignee'] ?? 'any'),
+                match ($this->options['scope'] ?? 'open') {
+                    'due' => 'due',
+                    'overdue' => 'overdue',
+                    default => 'open',
+                },
+                match ($this->options['assignee'] ?? 'any') {
+                    'me' => 'me',
+                    'unassigned' => 'unassigned',
+                    default => 'any',
+                },
                 (int)($this->options['limit'] ?? 20)
             ),
             'showAssignee' => (bool)($this->options['showAssignee'] ?? false),
@@ -70,6 +78,9 @@ final class ReminderListWidget implements WidgetInterface, RequestAwareWidgetInt
         return $view->render('Widget/ReminderList');
     }
 
+    /**
+     * @return array<string, mixed>
+     */
     public function getOptions(): array
     {
         return $this->options;
@@ -80,6 +91,9 @@ final class ReminderListWidget implements WidgetInterface, RequestAwareWidgetInt
         return [JavaScriptModuleInstruction::create('@formatsoft/content-reminder/reminder-actions.js')];
     }
 
+    /**
+     * @return list<string>
+     */
     public function getCssFiles(): array
     {
         return ['EXT:content_reminder/Resources/Public/Css/backend.css'];

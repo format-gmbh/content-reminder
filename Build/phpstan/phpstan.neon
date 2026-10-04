@@ -1,0 +1,11 @@
+includes:
+  - version-compatibility.neon
+
+parameters:
+  level: 8
+  paths:
+    - ../../Classes
+    - ../../Configuration
+    - ../../Tests
+    - ../../ext_localconf.php
+  tmpDir: ../../.Build/phpstan

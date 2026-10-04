@@ -251,7 +251,7 @@ final readonly class DataHandlerHook
         if ($target >= 0) {
             return $target;
         }
-        return $this->reminderRepository->findByUid(abs($target))?->pageUid ?? 0;
+        return $this->reminderRepository->findByUid(abs($target))->pageUid ?? 0;
     }
 
     /**

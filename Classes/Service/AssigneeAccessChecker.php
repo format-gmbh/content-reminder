@@ -50,7 +50,8 @@ class AssigneeAccessChecker
     {
         $user = GeneralUtility::makeInstance(BackendUserAuthentication::class);
         $record = $user->getRawUserByUid($userUid);
-        if (!is_array($record)) {
+        // No record: getRawUserByUid() returns false despite its declared type
+        if (!isset($record['uid'])) {
             return '#' . $userUid;
         }
         return trim((string)($record['realName'] ?? '')) ?: (string)($record['username'] ?? '#' . $userUid);

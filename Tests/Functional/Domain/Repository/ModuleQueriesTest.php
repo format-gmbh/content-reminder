@@ -63,6 +63,7 @@ final class ModuleQueriesTest extends FunctionalTestCase
     }
 
     /**
+     * @param 'open'|'due'|'overdue'|'upcoming'|'paused'|'done'|'all' $state
      * @param list<int> $expected
      */
     #[Test]

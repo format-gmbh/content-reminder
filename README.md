@@ -152,8 +152,12 @@ Dependencies for the tests are installed into `.Build/` of the extension:
 
 ```bash
 composer install
+composer phpstan
 composer test:unit
 ```
+
+PHPStan runs on level 8. Code that differs between TYPO3 v13 and v14 is listed in
+`Build/phpstan/version-compatibility.neon`; run the analysis against both versions.
 
 Functional tests need a database user that may create databases, e.g. in DDEV:
 
@@ -166,7 +170,7 @@ composer test:functional
 To test against TYPO3 v13 instead of the latest version:
 
 ```bash
-composer update --with "typo3/cms-core:^13.4" --with "typo3/cms-backend:^13.4" --with "typo3/cms-dashboard:^13.4" --with "typo3/cms-scheduler:^13.4"
+composer update --with "typo3/cms-core:^13.4" --with "typo3/cms-backend:^13.4" --with "typo3/cms-dashboard:^13.4" --with "typo3/cms-scheduler:^13.4" --with "typo3/cms-setup:^13.4"
 ```
 
 ## License
