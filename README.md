@@ -75,23 +75,42 @@ as a dependency of your site to configure the extension per site.
 ## Permissions
 
 Permissions are based on standard TYPO3 access rights; there is no separate
-permission management.
+permission management. Administrators may do everything. For editors, set up
+the backend user group as follows:
 
-1. **Table permissions**: grant `tx_contentreminder_reminder` in
-   *Tables (listing)* and *Tables (modify)* of the backend user group.
-2. **Page permissions**: users need *Show page* to see reminders and
-   *Edit content* to create, complete or take over reminders on a page.
-3. **Custom options** (tab *Access Lists*, section *Content Reminder*):
-   - *Assign reminders to other users* – assign reminders to colleagues
+1. **Table permissions** (tab *Record Permissions*, field *Table permissions*):
+   set the table *Reminder* to *Read* (see reminders) or *Read & Write*
+   (create, complete, take over, edit reminders).
+2. **Page permissions** (module *Permissions*): users need
+   *Show page* to see the reminders of a page and *Edit content* to create,
+   complete or take over reminders on it. The pages must be part of the
+   group's mounts (tab *Mounts*: *DB Mounts* in TYPO3 v13, *Page Tree Entry
+   Points* in v14).
+3. **Custom options** (tab *Module Permissions*, field *Custom module
+   options*, section *Content Reminder*), both optional:
+   - *Assign reminders to other users* – assign reminders to colleagues and
+     change the responsible person
    - *Manage all reminders* – edit, complete and delete reminders of others
+4. **Modules and widgets** (tab *Module Permissions*):
+   - *Allowed modules*: the backend module *Reminders* (below *Web* in TYPO3
+     v13, below *Content* in v14)
+   - *Allowed dashboard widgets*: the widgets of the group *Content Reminder*
+
+The page tree markers, the panel in the page module and the filters and
+actions in the list module need no additional permission.
+
+In the table, *read access* means table permission *Read* and page
+permission *Show page*; *write access* means *Read & Write* and *Edit
+content*. All actions require at least read or write access to the page.
 
 | Action | Allowed for |
 |---|---|
-| See reminders and history of a page | read access |
+| See reminders and completion history of a page | read access |
 | Create a reminder for oneself / unassigned | write access |
-| Assign a reminder to somebody else | *Assign reminders to other users* |
+| Assign a reminder to somebody else, change the responsible person | *Assign reminders to other users* |
 | Take over an unassigned reminder | write access |
 | Take over a reminder assigned to somebody else | *Assign …* or *Manage all …* |
+| Give a reminder back (unassign) | responsible person, *Assign …*, *Manage all …* |
 | Edit, pause, resume, reopen | creator, responsible person, *Manage all …* |
 | Mark as done | responsible person; anybody with write access if unassigned; *Manage all …* |
 | Delete | creator, *Manage all …* |
