@@ -6,10 +6,17 @@ versions follow [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.4.2] - 2026-10-04
+
 ### Changed
 
 - TYPO3 v14: module icon as line icon in the style of the core module icons,
   colored by the backend theme
+
+### Fixed
+
+- README: permission setup with the field names of the backend user group form
+  in TYPO3 v13 and v14, including mounts, allowed modules and dashboard widgets
 
 ## [0.4.1] - 2026-10-04
 
@@ -74,7 +81,8 @@ First public release for TYPO3 13.4 LTS and 14.x.
 - Dashboard widgets and the dashboard preset "Content maintenance"
 - Site set "Content Reminder" with the setting `contentReminder.assignableGroups`
 
-[Unreleased]: https://github.com/format-gmbh/content-reminder/compare/0.4.1...main
+[Unreleased]: https://github.com/format-gmbh/content-reminder/compare/0.4.2...main
+[0.4.2]: https://github.com/format-gmbh/content-reminder/compare/0.4.1...0.4.2
 [0.4.1]: https://github.com/format-gmbh/content-reminder/compare/0.4.0...0.4.1
 [0.4.0]: https://github.com/format-gmbh/content-reminder/compare/0.3.0...0.4.0
 [0.3.0]: https://github.com/format-gmbh/content-reminder/compare/0.2.0...0.3.0
