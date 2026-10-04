@@ -6,6 +6,11 @@ versions follow [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Changed
+
+- TYPO3 v14: module icon as line icon in the style of the core module icons,
+  colored by the backend theme
+
 ## [0.4.1] - 2026-10-04
 
 ### Changed
