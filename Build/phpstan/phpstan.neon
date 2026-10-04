@@ -3,6 +3,10 @@ includes:
 
 parameters:
   level: 8
+  # Supported PHP versions (composer.json), so that e.g. PHP 8.2 return types are checked
+  phpVersion:
+    min: 80200
+    max: 80599
   paths:
     - ../../Classes
     - ../../Configuration

@@ -220,7 +220,7 @@ final readonly class ReminderModuleController
      */
     private function getArchive(array $pages, array $filters, BackendUserAuthentication $user): array
     {
-        $since = $filters['period'] === 'all' ? null : $this->clock->today()->modify('-' . $filters['period'] . ' days');
+        $since = $filters['period'] === 'all' ? null : $this->clock->today()->sub(new \DateInterval('P' . (int)$filters['period'] . 'D'));
         $completedBy = match ($filters['assignee']) {
             'all', 'unassigned' => null,
             'me' => (int)$user->getUserId(),
