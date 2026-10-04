@@ -134,6 +134,18 @@ not opted out (*User settings → Do not send me the weekly email with due
 reminders*). Reminders without responsible person are sent to
 `contentReminder.mail.unassignedRecipient`, if set.
 
+## Archive cleanup
+
+The archive table `tx_contentreminder_reminder_log` is registered for the
+scheduler task *Table garbage collection*, based on the completion date. The
+default retention is **2 years (730 days)**; it also applies if a task cleans
+up *all tables*. For a different retention, create a task for
+`tx_contentreminder_reminder_log` only and set *Delete entries older than
+given number of days*.
+
+The archive is deliberately not listed in *Maintenance → Clear persistent
+database tables*, which empties tables completely.
+
 ## Development
 
 Dependencies for the tests are installed into `.Build/` of the extension:
@@ -154,7 +166,7 @@ composer test:functional
 To test against TYPO3 v13 instead of the latest version:
 
 ```bash
-composer update --with "typo3/cms-core:^13.4" --with "typo3/cms-backend:^13.4" --with "typo3/cms-dashboard:^13.4"
+composer update --with "typo3/cms-core:^13.4" --with "typo3/cms-backend:^13.4" --with "typo3/cms-dashboard:^13.4" --with "typo3/cms-scheduler:^13.4"
 ```
 
 ## License

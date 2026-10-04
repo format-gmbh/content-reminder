@@ -51,6 +51,7 @@ jobs:
           --with "typo3/cms-core:${{ matrix.typo3 }}"
           --with "typo3/cms-backend:${{ matrix.typo3 }}"
           --with "typo3/cms-dashboard:${{ matrix.typo3 }}"
+          --with "typo3/cms-scheduler:${{ matrix.typo3 }}"
 
       - name: Unit tests
         run: composer test:unit

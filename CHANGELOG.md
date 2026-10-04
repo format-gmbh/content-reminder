@@ -6,6 +6,11 @@ versions follow [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Added
+
+- Archive table registered for the scheduler task "Table garbage collection"
+  (date field: completion date, default retention 2 years)
+
 ## [0.3.0] - 2026-10-03
 
 ### Added

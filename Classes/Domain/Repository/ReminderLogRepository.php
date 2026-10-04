@@ -26,6 +26,12 @@ final readonly class ReminderLogRepository
 {
     public const TABLE = 'tx_contentreminder_reminder_log';
 
+    /**
+     * Default retention for the scheduler task "Table garbage collection" (also used with
+     * "all tables"). Generous, since the log is the archive of completions.
+     */
+    public const GARBAGE_COLLECTION_DAYS = 730;
+
     public function __construct(
         private ConnectionPool $connectionPool,
     ) {}
