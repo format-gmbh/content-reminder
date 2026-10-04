@@ -8,6 +8,8 @@ versions follow [Semantic Versioning](https://semver.org/).
 
 ### Changed
 
+- Page tree is updated after reminders were saved or deleted in the editing form
+  or list module, so that the markers are up to date
 - Page module panel: heading "Due without responsible person" in the same size as the
   panel title
 

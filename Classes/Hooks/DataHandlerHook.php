@@ -106,6 +106,30 @@ final readonly class DataHandlerHook
     }
 
     /**
+     * New or changed reminders may change the markers in the page tree: let the
+     * backend reload the tree with the next rendered module (e.g. after "Save and close").
+     * The extension's own actions refresh the tree in JavaScript.
+     *
+     * @param array<string, mixed> $fieldArray
+     */
+    public function processDatamap_afterDatabaseOperations(string $status, string $table, string|int $id, array $fieldArray, DataHandler $dataHandler): void
+    {
+        if ($table === Reminder::TABLE && !$this->trustedOperation->isActive()) {
+            BackendUtility::setUpdateSignal('updatePageTree');
+        }
+    }
+
+    /**
+     * Deleted, moved, copied or restored reminders: see processDatamap_afterDatabaseOperations()
+     */
+    public function processCmdmap_postProcess(string $command, string $table, string|int $id, mixed $value, DataHandler $dataHandler): void
+    {
+        if ($table === Reminder::TABLE && !$this->trustedOperation->isActive()) {
+            BackendUtility::setUpdateSignal('updatePageTree');
+        }
+    }
+
+    /**
      * @param array<string, mixed>|null $fieldArray
      */
     private function processNewRecord(?array &$fieldArray, DataHandler $dataHandler): void

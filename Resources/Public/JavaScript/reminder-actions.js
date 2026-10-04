@@ -48,6 +48,14 @@ class ReminderActions {
       event.preventDefault();
       this.showHistory(target.dataset.contentReminderHistory);
     }).delegateTo(document, '[data-content-reminder-history]');
+
+    // Reminders deleted via AJAX without reload (e.g. list module): update the page tree markers
+    new RegularEvent('typo3:datahandler:process', (event) => {
+      const payload = event.detail?.payload;
+      if (payload?.table === 'tx_contentreminder_reminder' && !payload.hasErrors) {
+        top.document.dispatchEvent(new CustomEvent('typo3:pagetree:refresh'));
+      }
+    }).bindTo(document);
   }
 
   handleAction(button) {
