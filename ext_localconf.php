@@ -14,14 +14,18 @@ $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_tcemain.php']['proc
 $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_tcemain.php']['processCmdmapClass']['content_reminder']
     = \Formatsoft\ContentReminder\Hooks\DataHandlerHook::class;
 
-// Scheduler task "Table garbage collection" (TYPO3 v13): allow cleaning up old archive entries.
-// TYPO3 v14 uses TCA instead (Configuration/TCA/Overrides/tx_scheduler_task.php), the
-// configuration below is deprecated there.
 if ((new \TYPO3\CMS\Core\Information\Typo3Version())->getMajorVersion() < 14) {
+    // Scheduler task "Table garbage collection": allow cleaning up old archive entries.
+    // TYPO3 v14 uses TCA instead (Configuration/TCA/Overrides/tx_scheduler_task.php), the
+    // configuration below is deprecated there.
     $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['scheduler']['tasks']['TYPO3\\CMS\\Scheduler\\Task\\TableGarbageCollectionTask']['options']['tables'][\Formatsoft\ContentReminder\Domain\Repository\ReminderLogRepository::TABLE] ??= [
         'dateField' => 'completed_at',
         'expirePeriod' => \Formatsoft\ContentReminder\Domain\Repository\ReminderLogRepository::GARBAGE_COLLECTION_DAYS,
     ];
+
+    // Page tree markers readable on the selected page (built into TYPO3 v14)
+    $GLOBALS['TYPO3_CONF_VARS']['BE']['stylesheets']['content_reminder']
+        = 'EXT:content_reminder/Resources/Public/Css/page-tree-v13.css';
 }
 
 // Additional permissions, configurable per backend user group ("Access Lists" tab)

@@ -1,0 +1,11 @@
+/*
+ * Content Reminder – page tree (TYPO3 v13 only, see ext_localconf.php)
+ * TYPO3 v13 colors status icons in the page tree with text-* classes, also on the
+ * blue background of the selected page. Use the text color of the selected node there,
+ * as TYPO3 v14 does.
+ */
+.node-active .node-information typo3-backend-icon,
+.node-selected .node-information typo3-backend-icon,
+.node:active .node-information typo3-backend-icon {
+  color: var(--tree-node-selected-color) !important;
+}

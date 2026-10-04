@@ -13,6 +13,10 @@ versions follow [Semantic Versioning](https://semver.org/).
 - Page module panel: heading "Due without responsible person" in the same size as the
   panel title
 
+### Fixed
+
+- TYPO3 v13: page tree marker visible on the selected (blue) page
+
 ## [0.4.0] - 2026-10-04
 
 ### Added
