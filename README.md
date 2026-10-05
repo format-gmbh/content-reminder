@@ -165,6 +165,17 @@ given number of days*.
 The archive is deliberately not listed in *Maintenance → Clear persistent
 database tables*, which empties tables completely.
 
+## Translations
+
+The extension ships English and German labels. Further languages are
+translated on [Crowdin](https://crowdin.com/) as part of the TYPO3
+translation server and installed as language packs via *Maintenance →
+Manage Language Packs*. Contributions are welcome.
+
+Labels are added and changed in the English source files only
+(`Resources/Private/Language/*.xlf`, `Configuration/Sets/*/labels.xlf`); a
+GitHub workflow uploads them to Crowdin on every push to `main`.
+
 ## Development
 
 Dependencies for the tests are installed into `.Build/` of the extension:
