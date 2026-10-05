@@ -135,6 +135,30 @@
 				<source>Comment</source>
 				<target>Kommentar</target>
 			</trans-unit>
+			<trans-unit id="tx_contentreminder_reminder.creator.system" approved="yes">
+				<source>System (created automatically)</source>
+				<target>System (automatisch erstellt)</target>
+			</trans-unit>
+			<trans-unit id="tx_contentreminder_reminder.origin" approved="yes">
+				<source>Origin</source>
+				<target>Herkunft</target>
+			</trans-unit>
+			<trans-unit id="tx_contentreminder_reminder.origin.manual" approved="yes">
+				<source>Created manually</source>
+				<target>Manuell angelegt</target>
+			</trans-unit>
+			<trans-unit id="tx_contentreminder_reminder.origin.staleContent" approved="yes">
+				<source>Outdated content (created automatically)</source>
+				<target>Veralteter Inhalt (automatisch erstellt)</target>
+			</trans-unit>
+			<trans-unit id="pages.tx_contentreminder_stale_exclude" approved="yes">
+				<source>Do not check for outdated content</source>
+				<target>Nicht auf veraltete Inhalte prüfen</target>
+			</trans-unit>
+			<trans-unit id="pages.tx_contentreminder_stale_exclude.description" approved="yes">
+				<source>No reminder "Outdated content" is created automatically for this page (Content Reminder).</source>
+				<target>Für diese Seite wird keine Erinnerung „Veralteter Inhalt“ automatisch erstellt (Content Reminder).</target>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

@@ -27,6 +27,8 @@ return static function (ContainerConfigurator $container): void {
             '../Classes/Exception/*',
             '../Classes/Mail/WeeklyMail.php',
             '../Classes/Mail/WeeklyMailSettings.php',
+            '../Classes/StaleContent/StaleContentSettings.php',
+            '../Classes/StaleContent/StalePage.php',
             // Widgets need their configuration and are registered below
             '../Classes/Dashboard/Widget/*',
         ]);

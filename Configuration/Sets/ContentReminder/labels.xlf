@@ -75,6 +75,33 @@
 			<trans-unit id="settings.description.contentReminder.backendUrl">
 				<source>Empty = derived from the site base, e.g. https://example.org/typo3</source>
 			</trans-unit>
+			<trans-unit id="categories.contentReminder.stale">
+				<source>Outdated content</source>
+			</trans-unit>
+			<trans-unit id="settings.contentReminder.stale.enabled">
+				<source>Create reminders for outdated content</source>
+			</trans-unit>
+			<trans-unit id="settings.description.contentReminder.stale.enabled">
+				<source>Creates an unassigned reminder for standard pages whose content has not been changed for the given number of months. Requires the scheduler task "content-reminder:create-stale-reminders" (e.g. weekly).</source>
+			</trans-unit>
+			<trans-unit id="settings.contentReminder.stale.months">
+				<source>Months without changes</source>
+			</trans-unit>
+			<trans-unit id="settings.description.contentReminder.stale.months">
+				<source>A page counts as outdated if none of its records (content elements, file references, …) has been changed for this number of months. 24 = 2 years.</source>
+			</trans-unit>
+			<trans-unit id="settings.contentReminder.stale.excludePages">
+				<source>Excluded pages</source>
+			</trans-unit>
+			<trans-unit id="settings.description.contentReminder.stale.excludePages">
+				<source>Comma-separated page uids. These pages and their subpages are not checked. Single pages can also be excluded in their page properties.</source>
+			</trans-unit>
+			<trans-unit id="settings.contentReminder.stale.limit">
+				<source>Maximum per run</source>
+			</trans-unit>
+			<trans-unit id="settings.description.contentReminder.stale.limit">
+				<source>Maximum number of reminders created per run, oldest pages first.</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

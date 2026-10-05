@@ -429,6 +429,12 @@
 			<trans-unit id="module.count">
 				<source>Entries: %d</source>
 			</trans-unit>
+			<trans-unit id="staleContent.title">
+				<source>Outdated content – please review</source>
+			</trans-unit>
+			<trans-unit id="staleContent.notes">
+				<source>The content of this page has not been changed since %s. Please check whether it is still up to date.</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

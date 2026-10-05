@@ -56,6 +56,9 @@ subpages, with filters and actions:
   one email per site with their overdue reminders and those due within the
   next days (German or English, depending on the user's backend language).
   Users can opt out in their user settings.
+- **Outdated content** (optional, disabled by default): reminders
+  *Outdated content – please review* are created automatically for pages
+  whose content has not been changed for a configurable number of months.
 
 ## Installation
 
@@ -133,6 +136,10 @@ dependency of your site to edit these settings in the backend.
 | `contentReminder.mail.lookaheadDays` | `7` | Reminders due within this number of days are included in addition to overdue ones |
 | `contentReminder.mail.fromAddress` / `fromName` | system default | Sender of the weekly email |
 | `contentReminder.mail.unassignedRecipient` | empty | Address that receives the reminders without responsible person; empty = not mailed |
+| `contentReminder.stale.enabled` | `false` | Create reminders for outdated content, see below |
+| `contentReminder.stale.months` | `24` | Pages without changes for this number of months are outdated |
+| `contentReminder.stale.excludePages` | empty | Comma-separated page uids whose subtrees are not checked |
+| `contentReminder.stale.limit` | `50` | Maximum number of new reminders per run, oldest pages first |
 
 ## Weekly email
 
@@ -152,6 +159,38 @@ Recipients are the responsible persons with a valid email address who have
 not opted out (*User settings → Do not send me the weekly email with due
 reminders*). Reminders without responsible person are sent to
 `contentReminder.mail.unassignedRecipient`, if set.
+
+## Outdated content
+
+Optionally, the extension creates a reminder *Outdated content – please
+review* for pages whose content has not been changed for a long time. The
+function is **disabled by default**; enable it per site with
+`contentReminder.stale.enabled` and run the command e.g. weekly with the
+scheduler task *Execute console commands*:
+
+```bash
+# Which pages are outdated (also for sites where the function is disabled)
+vendor/bin/typo3 content-reminder:create-stale-reminders --dry-run
+
+# Create the reminders for one site, at most 10
+vendor/bin/typo3 content-reminder:create-stale-reminders --site=main --limit=10
+```
+
+- **Last change** of a page is the latest change date of all records stored
+  on it: content elements including translations, file references and
+  records of other tables. Changes of the page properties do not count.
+- Checked are standard pages that are neither hidden nor excluded – via the
+  site setting `contentReminder.stale.excludePages` (subtrees) or the option
+  *Do not check for outdated content* in the page properties (single page;
+  the field must be allowed for editors in *Allowed fields*).
+- The reminder has no responsible person and no due date, so it is due
+  immediately and appears in the page tree, the dashboard and the weekly
+  email (for unassigned reminders).
+- No new reminder is created while one is open on the page. Completing it
+  counts as a review: the page is only checked again after the configured
+  number of months, even if nothing was changed.
+- The texts are created in the default language of the site (German or
+  English).
 
 ## Archive cleanup
 

@@ -6,6 +6,15 @@ versions follow [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Added
+
+- Optional reminders for outdated content: the command
+  `content-reminder:create-stale-reminders` creates the reminder "Outdated
+  content – please review" for pages whose content has not been changed for a
+  configurable number of months. Disabled by default; site settings
+  `contentReminder.stale.*` and the page property "Do not check for outdated
+  content". Requires a database schema update.
+
 ## [0.4.2] - 2026-10-04
 
 ### Changed

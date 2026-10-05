@@ -111,7 +111,8 @@ $tca = [
                 'type' => 'select',
                 'renderType' => 'selectSingle',
                 'items' => [
-                    ['label' => '', 'value' => 0],
+                    // Reminders created by the system, e.g. for outdated content (concept 6.3)
+                    ['label' => $ll . '.creator.system', 'value' => 0],
                 ],
                 'foreign_table' => 'be_users',
                 'readOnly' => true,
@@ -126,6 +127,21 @@ $tca = [
                 'items' => [
                     ['label' => $ll . '.status.open', 'value' => 0],
                     ['label' => $ll . '.status.done', 'value' => 1],
+                ],
+                'readOnly' => true,
+                'default' => 0,
+            ],
+        ],
+        // How the reminder was created. Not shown in the form; the title of automatic reminders
+        // says what they are about.
+        'origin' => [
+            'label' => $ll . '.origin',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'items' => [
+                    ['label' => $ll . '.origin.manual', 'value' => 0],
+                    ['label' => $ll . '.origin.staleContent', 'value' => 1],
                 ],
                 'readOnly' => true,
                 'default' => 0,

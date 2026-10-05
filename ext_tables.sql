@@ -4,7 +4,8 @@
 CREATE TABLE tx_contentreminder_reminder (
 	KEY page_status (pid, deleted, status),
 	KEY assignee_due (assignee, status, due_date),
-	KEY status_due (status, due_date)
+	KEY status_due (status, due_date),
+	KEY page_origin (pid, origin, status)
 );
 
 CREATE TABLE tx_contentreminder_reminder_log (

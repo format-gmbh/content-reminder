@@ -2,6 +2,8 @@ categories:
   contentReminder: ~
   contentReminder.mail:
     parent: contentReminder
+  contentReminder.stale:
+    parent: contentReminder
 
 settings:
   contentReminder.assignableGroups:
@@ -45,3 +47,20 @@ settings:
     default: ''
     type: string
     category: contentReminder.mail
+
+  contentReminder.stale.enabled:
+    default: false
+    type: bool
+    category: contentReminder.stale
+  contentReminder.stale.months:
+    default: 24
+    type: int
+    category: contentReminder.stale
+  contentReminder.stale.excludePages:
+    default: ''
+    type: string
+    category: contentReminder.stale
+  contentReminder.stale.limit:
+    default: 50
+    type: int
+    category: contentReminder.stale

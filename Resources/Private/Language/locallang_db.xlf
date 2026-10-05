@@ -102,6 +102,24 @@
 			<trans-unit id="tx_contentreminder_reminder_log.comment">
 				<source>Comment</source>
 			</trans-unit>
+			<trans-unit id="tx_contentreminder_reminder.creator.system">
+				<source>System (created automatically)</source>
+			</trans-unit>
+			<trans-unit id="tx_contentreminder_reminder.origin">
+				<source>Origin</source>
+			</trans-unit>
+			<trans-unit id="tx_contentreminder_reminder.origin.manual">
+				<source>Created manually</source>
+			</trans-unit>
+			<trans-unit id="tx_contentreminder_reminder.origin.staleContent">
+				<source>Outdated content (created automatically)</source>
+			</trans-unit>
+			<trans-unit id="pages.tx_contentreminder_stale_exclude">
+				<source>Do not check for outdated content</source>
+			</trans-unit>
+			<trans-unit id="pages.tx_contentreminder_stale_exclude.description">
+				<source>No reminder "Outdated content" is created automatically for this page (Content Reminder).</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

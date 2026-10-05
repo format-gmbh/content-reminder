@@ -571,6 +571,14 @@
 				<source>Entries: %d</source>
 				<target>Einträge: %d</target>
 			</trans-unit>
+			<trans-unit id="staleContent.title" approved="yes">
+				<source>Outdated content – please review</source>
+				<target>Veralteter Inhalt – bitte überprüfen</target>
+			</trans-unit>
+			<trans-unit id="staleContent.notes" approved="yes">
+				<source>The content of this page has not been changed since %s. Please check whether it is still up to date.</source>
+				<target>Der Inhalt dieser Seite wurde seit %s nicht geändert. Bitte prüfen, ob er noch aktuell ist.</target>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

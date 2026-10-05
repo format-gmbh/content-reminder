@@ -1,0 +1,57 @@
+"pages",,,,,,,,,,,
+,"uid","pid","title","doktype","deleted","hidden","sys_language_uid","crdate","tstamp","tx_contentreminder_stale_exclude","l10n_parent"
+,1,0,"Root, content changed recently",1,0,0,0,1609459200,1609459200,0,0
+,2,1,"Old content",1,0,0,0,1609459200,1609459200,0,0
+,3,1,"Hidden, old content",1,0,1,0,1609459200,1609459200,0,0
+,4,1,"Folder, old content",254,0,0,0,1609459200,1609459200,0,0
+,5,1,"Excluded in page properties",1,0,0,0,1609459200,1609459200,1,0
+,6,1,"Excluded subtree",1,0,0,0,1609459200,1609459200,0,0
+,7,6,"Below excluded subtree",1,0,0,0,1609459200,1609459200,0,0
+,8,1,"Only page properties changed",1,0,0,0,1609459200,1767225600,0,0
+,9,1,"File reference changed",1,0,0,0,1609459200,1609459200,0,0
+,10,1,"Open automatic reminder",1,0,0,0,1609459200,1609459200,0,0
+,11,1,"Reviewed recently",1,0,0,0,1609459200,1609459200,0,0
+,12,1,"Only deleted content changed",1,0,0,0,1609459200,1609459200,0,0
+,13,1,"Without records",1,0,0,0,1640995200,1640995200,0,0
+,14,1,"Translation changed",1,0,0,0,1609459200,1609459200,0,0
+,15,1,"Created recently, no records",1,0,0,0,1767225600,1767225600,0,0
+,16,1,"Deleted page",1,1,0,0,1609459200,1609459200,0,0
+,17,1,"Manual reminder only",1,0,0,0,1609459200,1609459200,0,0
+,18,1,"Translated page properties changed",1,0,0,0,1609459200,1609459200,0,0
+,19,18,"Translated page properties changed (de)",1,0,0,1,1609459200,1767225600,0,18
+,20,1,"Subpage changed",1,0,0,0,1609459200,1609459200,0,0
+,21,20,"Changed subpage",1,0,0,0,1767225600,1767225600,0,0
+"be_users",,,,,,,,,,
+,"uid","pid","username","realName","admin","lang",,,,
+,1,0,"admin","Ada Admin",1,"default",,,,
+"tt_content",,,,,,,,,,
+,"uid","pid","header","CType","deleted","sys_language_uid","tstamp",,,
+,1,1,"Recent",text,0,0,1767225600,,,
+,2,2,"Old",text,0,0,1672531200,,,
+,3,3,"Old",text,0,0,1672531200,,,
+,4,4,"Old",text,0,0,1672531200,,,
+,5,5,"Old",text,0,0,1672531200,,,
+,6,6,"Old",text,0,0,1672531200,,,
+,7,7,"Old",text,0,0,1672531200,,,
+,8,8,"Old",text,0,0,1672531200,,,
+,9,9,"Old",text,0,0,1672531200,,,
+,10,10,"Old",text,0,0,1672531200,,,
+,11,11,"Old",text,0,0,1672531200,,,
+,12,12,"Old",text,0,0,1672531200,,,
+,13,12,"Deleted, recent",text,1,0,1767225600,,,
+,14,14,"Old",text,0,0,1672531200,,,
+,15,14,"Translation, recent",text,0,1,1767225600,,,
+,16,17,"Old",text,0,0,1672531200,,,
+,17,18,"Old",text,0,0,1672531200,,,
+,18,20,"Old",text,0,0,1672531200,,,
+"sys_file_reference",,,,,,,,,,
+,"uid","pid","uid_local","uid_foreign","tablenames","fieldname","deleted","tstamp",,
+,1,9,1,9,"tt_content","image",0,1767225600,,
+"tx_contentreminder_reminder",,,,,,,,,,
+,"uid","pid","title","origin","status","creator","assignee","due_date","deleted",
+,1,10,"Outdated content – please review",1,0,0,0,\NULL,0,
+,2,11,"Outdated content – please review",1,1,0,0,\NULL,0,
+,3,17,"Manual reminder",0,0,2,2,\NULL,0,
+"tx_contentreminder_reminder_log",,,,,,,,,,
+,"uid","pid","reminder","reminder_title","page","page_title","completed_by","completed_by_name","completed_at",
+,1,0,2,"Outdated content – please review",11,"Reviewed recently",2,"Eddi Editor",1767225600,

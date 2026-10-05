@@ -99,6 +99,42 @@
 				<source>Empty = derived from the site base, e.g. https://example.org/typo3</source>
 				<target>Leer = aus der Site-Basis abgeleitet, z. B. https://example.org/typo3</target>
 			</trans-unit>
+			<trans-unit id="categories.contentReminder.stale" approved="yes">
+				<source>Outdated content</source>
+				<target>Veraltete Inhalte</target>
+			</trans-unit>
+			<trans-unit id="settings.contentReminder.stale.enabled" approved="yes">
+				<source>Create reminders for outdated content</source>
+				<target>Erinnerungen für veraltete Inhalte erstellen</target>
+			</trans-unit>
+			<trans-unit id="settings.description.contentReminder.stale.enabled" approved="yes">
+				<source>Creates an unassigned reminder for standard pages whose content has not been changed for the given number of months. Requires the scheduler task "content-reminder:create-stale-reminders" (e.g. weekly).</source>
+				<target>Erstellt eine Erinnerung ohne Zuständigkeit für Standardseiten, deren Inhalt seit der angegebenen Anzahl Monate nicht geändert wurde. Benötigt den Planer-Task „content-reminder:create-stale-reminders“ (z. B. wöchentlich).</target>
+			</trans-unit>
+			<trans-unit id="settings.contentReminder.stale.months" approved="yes">
+				<source>Months without changes</source>
+				<target>Monate ohne Änderung</target>
+			</trans-unit>
+			<trans-unit id="settings.description.contentReminder.stale.months" approved="yes">
+				<source>A page counts as outdated if none of its records (content elements, file references, …) has been changed for this number of months. 24 = 2 years.</source>
+				<target>Eine Seite gilt als veraltet, wenn seit so vielen Monaten keiner ihrer Datensätze (Inhaltselemente, Dateiverweise, …) geändert wurde. 24 = 2 Jahre.</target>
+			</trans-unit>
+			<trans-unit id="settings.contentReminder.stale.excludePages" approved="yes">
+				<source>Excluded pages</source>
+				<target>Ausgenommene Seiten</target>
+			</trans-unit>
+			<trans-unit id="settings.description.contentReminder.stale.excludePages" approved="yes">
+				<source>Comma-separated page uids. These pages and their subpages are not checked. Single pages can also be excluded in their page properties.</source>
+				<target>Kommagetrennte Seiten-UIDs. Diese Seiten und ihre Unterseiten werden nicht geprüft. Einzelne Seiten lassen sich auch in den Seiteneigenschaften ausnehmen.</target>
+			</trans-unit>
+			<trans-unit id="settings.contentReminder.stale.limit" approved="yes">
+				<source>Maximum per run</source>
+				<target>Höchstens pro Lauf</target>
+			</trans-unit>
+			<trans-unit id="settings.description.contentReminder.stale.limit" approved="yes">
+				<source>Maximum number of reminders created per run, oldest pages first.</source>
+				<target>Höchstzahl neuer Erinnerungen pro Lauf, die ältesten Seiten zuerst.</target>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
