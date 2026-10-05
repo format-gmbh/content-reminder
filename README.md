@@ -189,6 +189,10 @@ vendor/bin/typo3 content-reminder:create-stale-reminders --site=main --limit=10
 - No new reminder is created while one is open on the page. Completing it
   counts as a review: the page is only checked again after the configured
   number of months, even if nothing was changed.
+- Deleting the reminder does not count as a review: it is created again with
+  the next run. To exclude a page permanently, use the page property *Do not
+  check for outdated content*. Only administrators and users with *Manage all
+  reminders* may delete these reminders.
 - The texts are created in the default language of the site (German or
   English).
 
