@@ -6,6 +6,8 @@ versions follow [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.5.0] - 2026-10-05
+
 ### Added
 
 - Optional reminders for outdated content: the command
@@ -90,7 +92,8 @@ First public release for TYPO3 13.4 LTS and 14.x.
 - Dashboard widgets and the dashboard preset "Content maintenance"
 - Site set "Content Reminder" with the setting `contentReminder.assignableGroups`
 
-[Unreleased]: https://github.com/format-gmbh/content-reminder/compare/0.4.2...main
+[Unreleased]: https://github.com/format-gmbh/content-reminder/compare/0.5.0...main
+[0.5.0]: https://github.com/format-gmbh/content-reminder/compare/0.4.2...0.5.0
 [0.4.2]: https://github.com/format-gmbh/content-reminder/compare/0.4.1...0.4.2
 [0.4.1]: https://github.com/format-gmbh/content-reminder/compare/0.4.0...0.4.1
 [0.4.0]: https://github.com/format-gmbh/content-reminder/compare/0.3.0...0.4.0
