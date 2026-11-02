@@ -6,6 +6,18 @@ versions follow [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Added
+
+- Higher variants of the dashboard widgets "My reminders", "All reminders" and
+  "Recently completed", selectable as "(large)" in the widget wizard
+
+### Changed
+
+- Extension state is "stable"
+- All reminder list widgets are medium high, the lists scroll inside the widget.
+  Run the upgrade wizard "Content Reminder: medium height for reminder widgets on
+  existing dashboards" to apply this to dashboards whose widgets have been moved.
+
 ## [0.5.0] - 2026-10-05
 
 ### Added

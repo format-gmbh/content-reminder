@@ -47,7 +47,9 @@ subpages, with filters and actions:
   *Done*, *Take over*, *Resume*, *Reopen* and *Completion history*.
 - **Dashboard**: widgets *My reminders*, *All reminders*, *Without
   responsible person*, *Overdue*, *Recently completed*, a counter and a status
-  chart – and the dashboard preset *Content maintenance*.
+  chart – and the dashboard preset *Content maintenance*. The list widgets are
+  medium high; *My reminders*, *All reminders* and *Recently completed* are
+  also available as higher *(large)* variants in the widget wizard.
 - **Backend module** *Content → Reminders* with page tree: all reminders of
   the selected page and its subpages (or of all accessible pages), filtered
   by person and state, with actions – and the archive of completions,
@@ -243,7 +245,7 @@ composer test:functional
 To test against TYPO3 v13 instead of the latest version:
 
 ```bash
-composer update --with "typo3/cms-core:^13.4" --with "typo3/cms-backend:^13.4" --with "typo3/cms-dashboard:^13.4" --with "typo3/cms-scheduler:^13.4" --with "typo3/cms-setup:^13.4"
+composer update --with "typo3/cms-core:^13.4" --with "typo3/cms-backend:^13.4" --with "typo3/cms-dashboard:^13.4" --with "typo3/cms-install:^13.4" --with "typo3/cms-scheduler:^13.4" --with "typo3/cms-setup:^13.4"
 ```
 
 ## License

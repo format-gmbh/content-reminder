@@ -343,6 +343,30 @@
 				<source>Who completed which reminder and when.</source>
 				<target>Wer wann welche Erinnerung erledigt hat.</target>
 			</trans-unit>
+			<trans-unit id="widget.contentReminderMineLarge.title" approved="yes">
+				<source>My reminders (large)</source>
+				<target>Meine Erinnerungen (groß)</target>
+			</trans-unit>
+			<trans-unit id="widget.contentReminderMineLarge.description" approved="yes">
+				<source>Your open reminders, due and overdue ones first. Higher version with room for more entries.</source>
+				<target>Ihre offenen Erinnerungen, fällige und überfällige zuerst. Höhere Variante mit Platz für mehr Einträge.</target>
+			</trans-unit>
+			<trans-unit id="widget.contentReminderAllLarge.title" approved="yes">
+				<source>All reminders (large)</source>
+				<target>Alle Erinnerungen (groß)</target>
+			</trans-unit>
+			<trans-unit id="widget.contentReminderAllLarge.description" approved="yes">
+				<source>All open reminders with responsible person, sorted by due date. Higher version with room for more entries.</source>
+				<target>Alle offenen Erinnerungen mit zuständiger Person, nach Fälligkeit sortiert. Höhere Variante mit Platz für mehr Einträge.</target>
+			</trans-unit>
+			<trans-unit id="widget.contentReminderRecentlyCompletedLarge.title" approved="yes">
+				<source>Recently completed (large)</source>
+				<target>Kürzlich erledigt (groß)</target>
+			</trans-unit>
+			<trans-unit id="widget.contentReminderRecentlyCompletedLarge.description" approved="yes">
+				<source>Who completed which reminder and when. Higher version with room for more entries.</source>
+				<target>Wer wann welche Erinnerung erledigt hat. Höhere Variante mit Platz für mehr Einträge.</target>
+			</trans-unit>
 			<trans-unit id="widget.contentReminderDueCount.title" approved="yes">
 				<source>Reminders due for you</source>
 				<target>Fällige Erinnerungen für Sie</target>

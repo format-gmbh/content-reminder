@@ -258,6 +258,24 @@
 			<trans-unit id="widget.contentReminderRecentlyCompleted.description">
 				<source>Who completed which reminder and when.</source>
 			</trans-unit>
+			<trans-unit id="widget.contentReminderMineLarge.title">
+				<source>My reminders (large)</source>
+			</trans-unit>
+			<trans-unit id="widget.contentReminderMineLarge.description">
+				<source>Your open reminders, due and overdue ones first. Higher version with room for more entries.</source>
+			</trans-unit>
+			<trans-unit id="widget.contentReminderAllLarge.title">
+				<source>All reminders (large)</source>
+			</trans-unit>
+			<trans-unit id="widget.contentReminderAllLarge.description">
+				<source>All open reminders with responsible person, sorted by due date. Higher version with room for more entries.</source>
+			</trans-unit>
+			<trans-unit id="widget.contentReminderRecentlyCompletedLarge.title">
+				<source>Recently completed (large)</source>
+			</trans-unit>
+			<trans-unit id="widget.contentReminderRecentlyCompletedLarge.description">
+				<source>Who completed which reminder and when. Higher version with room for more entries.</source>
+			</trans-unit>
 			<trans-unit id="widget.contentReminderDueCount.title">
 				<source>Reminders due for you</source>
 			</trans-unit>

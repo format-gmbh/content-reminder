@@ -8,9 +8,11 @@ use Formatsoft\ContentReminder\Dashboard\Widget\RecentlyCompletedWidget;
 use Formatsoft\ContentReminder\Dashboard\Widget\ReminderListWidget;
 use Formatsoft\ContentReminder\DataHandling\TrustedOperation;
 use Formatsoft\ContentReminder\Hooks\DataHandlerHook;
+use Formatsoft\ContentReminder\Upgrades\DashboardWidgetHeightUpgradeWizard;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 use TYPO3\CMS\Dashboard\Widgets\DoughnutChartWidget;
 use TYPO3\CMS\Dashboard\Widgets\NumberWithIconWidget;
+use TYPO3\CMS\Install\Updates\UpgradeWizardInterface;
 
 use function Symfony\Component\DependencyInjection\Loader\Configurator\service;
 
@@ -29,6 +31,8 @@ return static function (ContainerConfigurator $container): void {
             '../Classes/Mail/WeeklyMailSettings.php',
             '../Classes/StaleContent/StaleContentSettings.php',
             '../Classes/StaleContent/StalePage.php',
+            // Registered below, only if EXT:install is available
+            '../Classes/Upgrades/*',
             // Widgets need their configuration and are registered below
             '../Classes/Dashboard/Widget/*',
         ]);
@@ -38,6 +42,11 @@ return static function (ContainerConfigurator $container): void {
 
     // Shared state between the extension's actions and the DataHandler hook
     $services->set(TrustedOperation::class)->public();
+
+    // Upgrade wizards implement interfaces of EXT:install (still available in TYPO3 v14)
+    if (interface_exists(UpgradeWizardInterface::class)) {
+        $services->set(DashboardWidgetHeightUpgradeWizard::class);
+    }
 
     // -----------------------------------------------------------------
     // Dashboard widgets (concept 2.4.4), group "contentReminder"
@@ -53,10 +62,16 @@ return static function (ContainerConfigurator $container): void {
         'width' => $width,
     ];
 
+    // List widgets are medium high by default; the lists scroll inside the widget.
+    // "Large" variants with more room can be chosen in the widget wizard instead.
     // identifier => [options, height]
+    $mine = ['scope' => 'open', 'assignee' => 'me', 'showAssignee' => false, 'emptyLabel' => 'widget.empty.mine'];
+    $all = ['scope' => 'open', 'assignee' => 'any', 'showAssignee' => true, 'emptyLabel' => 'widget.empty'];
     $listWidgets = [
-        'contentReminderMine' => [['scope' => 'open', 'assignee' => 'me', 'showAssignee' => false, 'emptyLabel' => 'widget.empty.mine'], 'large'],
-        'contentReminderAll' => [['scope' => 'open', 'assignee' => 'any', 'showAssignee' => true, 'emptyLabel' => 'widget.empty'], 'large'],
+        'contentReminderMine' => [$mine, 'medium'],
+        'contentReminderMineLarge' => [$mine, 'large'],
+        'contentReminderAll' => [$all, 'medium'],
+        'contentReminderAllLarge' => [$all, 'large'],
         'contentReminderUnassigned' => [['scope' => 'open', 'assignee' => 'unassigned', 'showAssignee' => false, 'emptyLabel' => 'widget.empty.unassigned'], 'medium'],
         'contentReminderOverdue' => [['scope' => 'overdue', 'assignee' => 'any', 'showAssignee' => true, 'emptyLabel' => 'widget.empty.overdue'], 'medium'],
     ];
@@ -66,9 +81,11 @@ return static function (ContainerConfigurator $container): void {
             ->tag('dashboard.widget', $widget($identifier, $height));
     }
 
-    $services->set('content_reminder.widget.contentReminderRecentlyCompleted', RecentlyCompletedWidget::class)
-        ->arg('$options', ['limit' => 15])
-        ->tag('dashboard.widget', $widget('contentReminderRecentlyCompleted', 'large'));
+    foreach (['contentReminderRecentlyCompleted' => 'medium', 'contentReminderRecentlyCompletedLarge' => 'large'] as $identifier => $height) {
+        $services->set('content_reminder.widget.' . $identifier, RecentlyCompletedWidget::class)
+            ->arg('$options', ['limit' => 15])
+            ->tag('dashboard.widget', $widget($identifier, $height));
+    }
 
     $services->set('content_reminder.widget.contentReminderDueCount', NumberWithIconWidget::class)
         ->arg('$dataProvider', service(DueForUserCountProvider::class))
